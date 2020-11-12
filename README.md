@@ -6,7 +6,7 @@ git clone https://github.com/ncoresoftopensource/giteasy
 ```
 
 ### Regist Account
-`email` or `user-name`
+`email` or `user-name`   
 If you do a commit for the first time, you should check your information for the first time.
 ```
 git config --global user.email "you@example.com"
