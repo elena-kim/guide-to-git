@@ -11,7 +11,7 @@ If you do a commit for the first time, you should check your information for the
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
-
+Typically, try entering the email corresponding to the first line.
 
 ### How to apply `gitignore` for the first time after setting it up
 ```git
