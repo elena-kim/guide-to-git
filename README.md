@@ -15,7 +15,7 @@ git config --global user.name "Your Name"
 Typically, try entering the email corresponding to the first line.
 
 ### How to apply `gitignore` for the first time after setting it up
-The guitignore file must first exist.
+The gitignore file must exist at first.
 ```git
 git rm -r --cached .
 git add .
