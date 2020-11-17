@@ -1,4 +1,4 @@
-# giteasy
+# giteasy.
 
 ### Clone
 ```git
