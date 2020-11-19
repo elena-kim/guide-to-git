@@ -31,3 +31,8 @@ git commit --amend
 ```
 `:wq` + `Enter`
 ```
+
+### Git Log
+```
+git log
+```
