@@ -26,6 +26,10 @@ git commit -m "Apply .gitignore"
 ```
 git commit --amend
 ```
+And direct
+```
+git commit --amend -m "new message"
+```
 
 ### Last Commit Edit Save (Exit)
 ```
