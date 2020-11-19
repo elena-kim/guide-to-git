@@ -21,3 +21,13 @@ git rm -r --cached .
 git add .
 git commit -m "Apply .gitignore"
 ```
+
+### Last Commit Edit
+```
+git commit --amend
+```
+
+### Last Commit Edit Save (Exit)
+```
+`:wq` + `Enter`
+```
