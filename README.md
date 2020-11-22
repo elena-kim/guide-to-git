@@ -1,21 +1,23 @@
-# giteasy.
+# theeasiestgit.
 
 ### Clone
 ```git
-git clone https://github.com/ncoresoftopensource/giteasy
+git clone https://github.com/ncoresoftsource/theeasiestgit
 ```
 
 ### Regist Account 
-If you do a commit for the first time, you should check your information for the first time.   
-`email` or `user-name`
-```
+If you do a commit for the first time, you should check your information. <br>  
+You can enter your `email` or `user-name` on ther first line.
+```git
 git config --global user.email "you@example.com"
+```
+Or
+```git
 git config --global user.name "Your Name"
 ```
-Typically, try entering the email corresponding to the first line.
 
 ### How to apply `gitignore` for the first time after setting it up
-The gitignore file must exist at first.
+At first, the gitignore file exists unconditionally.
 ```git
 git rm -r --cached .
 git add .
