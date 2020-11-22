@@ -7,7 +7,7 @@ git clone https://github.com/ncoresoftsource/theeasiestgit
 
 ### Regist Account 
 If you do a commit for the first time, you should check your information. <br>
-You can enter your `email` or `user-name` on ther first line.
+You can enter your `email` or `user-name` on the first line.
 ```git
 git config --global user.email "you@example.com"
 ```
