@@ -42,3 +42,8 @@ git commit --amend -m "new message"
 ```
 git log
 ```
+
+### git reset
+```
+git checkout . 한 다음에 다시 돌리는 방법: git reset (검증해봐야함)
+```
