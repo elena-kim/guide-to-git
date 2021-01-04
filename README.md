@@ -55,4 +55,4 @@ $ git push http://example.com/repo.git (ex. git push https://github.com/ncoresof
 Username: <type your username>
 Password: <type your password>
 ```
-Also we suggest to read [gitcredentials](https://git-scm.com/docs/gitcredentials)
+Also we suggest to read [ gitcredentials](https://git-scm.com/docs/gitcredentials)
