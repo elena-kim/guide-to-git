@@ -43,7 +43,16 @@ git commit --amend -m "new message"
 git log
 ```
 
-### git reset
+### Git Reset
 ```
 git checkout . 한 다음에 다시 돌리는 방법: git reset (검증해봐야함)
 ```
+
+### Git Auto Login
+```
+$ git config credential.helper store
+$ git push http://example.com/repo.git (ex. git push https://github.com/ncoresoftsource/leagueoflegends.git)
+Username: <type your username>
+Password: <type your password>
+```
+Also we suggest to read [gitcredentials](https://git-scm.com/docs/gitcredentials)
