@@ -39,9 +39,17 @@ git commit --amend -m "new message"
 `:wq` + `Enter`
 ```
 
-### Check your Git Setting
+### Configure git
+You can check your git configurations in cmd by entering below line.
 ```
 git config --list
+```
+
+Your git configurations are saved in the `.gitconfig` file. And you can find this file in your home directory.
+```git
+[user]
+	name = elena.kim
+	email = elena.kim@ncoresoft.net
 ```
 
 ### Git Log
