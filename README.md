@@ -38,6 +38,11 @@ git commit --amend -m "new message"
 `:wq` + `Enter`
 ```
 
+### Check your Git Setting
+```
+git config --list
+```
+
 ### Git Log
 ```
 git log
