@@ -15,6 +15,7 @@ Or
 ```git
 git config --global user.name "Your Name"
 ```
+> If you want to use different Email for each repository, just remove "--global" option.
 
 ### How to apply `gitignore` for the first time after setting it up
 At first, the gitignore file exists unconditionally.
