@@ -68,6 +68,11 @@ git log
 git checkout . 한 다음에 다시 돌리는 방법: git reset (검증해봐야함)
 ```
 
+### Git Branch Switch
+```
+git checkout "branch name"
+```
+
 ### Git Auto Login
 ```
 $ git config credential.helper store
