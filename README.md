@@ -76,3 +76,9 @@ Username: <type your username>
 Password: <type your password>
 ```
 Also we suggest to read [ gitcredentials](https://git-scm.com/docs/gitcredentials)
+
+
+### Git Log Graph
+```git
+git log --graph --oneline --all
+```
