@@ -17,7 +17,7 @@ git config --global user.name "Your Name"
 ```
 > If you want to use different account for each repository, just remove "--global" option.
 <br/>
-<br/>
+   
 ### Change to Another Account 
 다른 github 계정을 사용하고 싶을 때 cmd창에서 `Regist Account` 와 동일하게 입력
 계정바꿔줬는데도 clone / push 등이 안되면 windows 자격증명에서 git 관련된 자격 증명 제거
