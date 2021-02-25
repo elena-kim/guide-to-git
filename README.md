@@ -103,13 +103,11 @@ https://avatars1.githubusercontent.com/devncore-james
 ```
 
 ### Git Avatar (C# BitmapSource)
-```
-if (Author.Email.Contains("+"))
-{
-    var bitmapImage = new BitmapImage();
-    bitmapImage.BeginInit();
-    bitmapImage.UriSource = new Uri(string.Format("https://avatars1.githubusercontent.com/{0}", Author.Email.Split('@')[0].Split('+')[1]));
-    bitmapImage.EndInit();
-    return bitmapImage;
-}
+```csharp
+string name = "devncore-elena";
+var bitmapImage = new BitmapImage();
+bitmapImage.BeginInit();
+bitmapImage.UriSource = new Uri(string.Format("https://avatars1.githubusercontent.com/{0}", name);
+bitmapImage.EndInit();
+return bitmapImage;
 ```
