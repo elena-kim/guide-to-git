@@ -92,10 +92,12 @@ Also we suggest to read [ gitcredentials](https://git-scm.com/docs/gitcredential
 <br/>
    
 ### Git Log Graph
+
 ```git
 git log --graph --oneline --all
 ```
-TBD..
+
+TBD...
 
 ### Git Avatar
 ```
