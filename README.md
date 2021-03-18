@@ -1,4 +1,4 @@
-# theeasiestgit.
+# the-easiest-git.
 
 ### Clone
 ```git
