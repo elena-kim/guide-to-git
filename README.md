@@ -1,30 +1,35 @@
-# the-easiest-git.
+# the-easiest-git
 
-### Clone
-```git
-git clone https://github.com/ncoresoftsource/theeasiestgit
-```
+## Overview
+- [Account](#1-account)
+- [Clone](#2-clone)
 
-### Regist Account 
+### 1. Account 
+#### 1.1 Regist
 If you do a commit for the first time, you should check your information. <br>
 You can enter your `email` or `user-name` on the first line.
 ```git
 git config --global user.email "you@example.com"
-```
-Or
-```git
 git config --global user.name "Your Name"
 ```
-> If you want to use different account for each repository, just remove "--global" option.
+:point_right: _If you want to use different account for each repository, just remove "--global" option._
 <br/>
-   
-### Change to Another Account 
+
+#### 1.2 Change
+It is same with [`Regist Account`](#11-regist)
+```git
+git config --global user.email "other@example.com"
+git config --global user.name "Other Name"
+```
 다른 github 계정을 사용하고 싶을 때 cmd창에서 `Regist Account` 와 동일하게 입력
 계정바꿔줬는데도 clone / push 등이 안되면 windows 자격증명에서 git 관련된 자격 증명 제거
-
 <br/>
-   
-### How to apply `gitignore` for the first time after setting it up
+
+### 2. Clone
+```git
+git clone https://github.com/devncore/the-easiest-git
+```
+#### :point_right: _How to apply `gitignore` for the first time after setting it up?_
 At first, the gitignore file exists unconditionally.
 ```git
 git rm -r --cached .
