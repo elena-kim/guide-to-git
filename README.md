@@ -3,6 +3,7 @@
 ## Overview
 - [Account](#1-account)
 - [Clone](#2-clone)
+- [Commit](#3-commit)
 
 ### 1. Account 
 #### 1.1 Regist
@@ -24,6 +25,7 @@ git config --global user.name "Other Name"
 다른 github 계정을 사용하고 싶을 때 cmd창에서 `Regist Account` 와 동일하게 입력
 계정바꿔줬는데도 clone / push 등이 안되면 windows 자격증명에서 git 관련된 자격 증명 제거
 <br/>
+* * *
 
 ### 2. Clone
 ```git
@@ -37,8 +39,10 @@ git add .
 git commit -m "Apply .gitignore"
 ```
 <br/>
-   
-### Last Commit Edit
+* * *
+
+### 3. Commit
+#### Last Commit Edit
 ```
 git commit --amend
 ```
@@ -53,7 +57,8 @@ git commit --amend -m "new message"
 `:wq` + `Enter`
 ```
 <br/>
-   
+* * *
+
 ### Configure git
 You can check your git configurations in cmd by entering below line.
 ```
