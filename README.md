@@ -124,3 +124,5 @@ bitmapImage.UriSource = new Uri(string.Format("https://avatars1.githubuserconten
 bitmapImage.EndInit();
 return bitmapImage;
 ```
+
+
