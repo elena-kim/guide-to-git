@@ -4,6 +4,7 @@
 - [Account](#1-account)
 - [Clone](#2-clone)
 - [Commit](#3-commit)
+- [Config](#4-config)
 
 ### 1. Account 
 #### 1.1 Regist
@@ -52,14 +53,14 @@ git commit --amend -m "new message"
 ```
 <br/>
     
-### Last Commit Edit Save (Exit)
+#### Last Commit Edit Save (Exit)
 ```
 `:wq` + `Enter`
 ```
 <br/>
 * * *
 
-### Configure git
+### 4. Config
 You can check your git configurations in cmd by entering below line.
 ```
 git config --list
