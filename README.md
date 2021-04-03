@@ -15,7 +15,7 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 :point_right: _If you want to use different account for each repository, just remove "--global" option._
-<br/>
+<br />
 
 #### 1.2 Change
 It is same with [`Regist Account`](#11-regist)
@@ -25,7 +25,7 @@ git config --global user.name "Other Name"
 ```
 다른 github 계정을 사용하고 싶을 때 cmd창에서 `Regist Account` 와 동일하게 입력
 계정바꿔줬는데도 clone / push 등이 안되면 windows 자격증명에서 git 관련된 자격 증명 제거
-<br/>
+<br />
 * * *
 
 ### 2. Clone
@@ -39,8 +39,8 @@ git rm -r --cached .
 git add .
 git commit -m "Apply .gitignore"
 ```
-<br/>
-* * *
+<br />  
+* * * 
 
 ### 3. Commit
 #### Last Commit Edit
@@ -57,7 +57,7 @@ git commit --amend -m "new message"
 ```
 `:wq` + `Enter`
 ```
-<br/>
+<br />
 * * *
 
 ### 4. Config
