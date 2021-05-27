@@ -95,7 +95,7 @@ git checkout "branch name"
 ### Git Auto Login
 ```
 $ git config credential.helper store
-$ git push http://example.com/repo.git (ex. git push https://github.com/ncoresoftsource/leagueoflegends.git)
+$ git push http://example.com/repo.git (ex. git push https://github.com/devncore/leagueoflegends.git)
 Username: <type your username>
 Password: <type your password>
 ```
