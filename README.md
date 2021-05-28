@@ -107,6 +107,7 @@ Username: <type your username>
 Password: <type your password>
 ```
 Also we suggest to read [ gitcredentials](https://git-scm.com/docs/gitcredentials)
+
 <br/>
 
 ## Git Avatar
