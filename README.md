@@ -48,7 +48,7 @@ git commit -m "Apply .gitignore"
 <br />  
 
 ## Commit
-- ### `Last Commit Edit`
+- ### `Edit Last Commit`
 ```
 git commit --amend
 git commit --amend -m "new message" # direct
@@ -58,6 +58,30 @@ git commit --amend -m "new message" # direct
 ```
 `:wq` + `Enter`
 ```
+    
+- ### `Edit Commit Author`
+예를 들어, 2번째 커밋의 Author를 바꾸고 싶다면 아래와 같이 입력합니다.
+```
+git rebase -i HEAD~2
+```
+![image](https://user-images.githubusercontent.com/74305823/135565874-99e8ae67-4ee5-4de7-a440-157c90ed7fb0.png)
+
+vi화면이 뜨면 입력모드(i)로 진입 후, 변경할 커밋의 'pick'을 'e'로 바꿔주고 저장&종료(:wq)합니다.
+
+![image](https://user-images.githubusercontent.com/74305823/135565972-ffd5c078-dd02-4dec-b84d-b2fca2a16a37.png)
+
+아래 명령어로 Author 정보를 입력합니다.
+```
+git commit --amend --author="user.name <user.email>"
+```
+![image](https://user-images.githubusercontent.com/74305823/135566231-bf30fb9d-5b8f-4569-9e5c-b783afcfff84.png)
+
+아래 명령어를 통해 Repository에 변경내용을 적용합니다.
+```
+git rebase --continue
+git push -f origin main
+```
+
 <br />
 
 ## Config
