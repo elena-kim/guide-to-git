@@ -114,14 +114,22 @@ _TBD.._
 <br />
 
 ## Reset
+지정한 commit 이후의 모든 commit history가 삭제된다.  
+예를 들어, 아래 사진에서 노란색으로 표시된 커밋을 되돌아갈 시점으로 지정한다면 빨간색으로 표시된 3개의 커밋 기록이 삭제된다.
+
+![reset](https://user-images.githubusercontent.com/74305823/137444338-a235fbd5-1ca3-479f-90f5-4e5ffe10aaae.png)
+
+#### 명령어 
 ```
 git reset {option} {되돌아갈 시점의 commit hash값}
+git push -f {remote name} {branch name}
 ```
 
 #### Option
 - hard: 파일을 포함해서 모든 히스토리를 싹 날려버린다. 
 - soft: 히스토리만 삭제하고 파일은 stage 상태 그대로 남겨둔다. 
 - mixed: 디폴트 옵션으로, 히스토리를 삭제한 후 파일도 그대로 남아있지만 stage 상태는 아니기에 다시 add를 해야 추적이 가능하다.
+
 
 #### hash값 확인
 해당 Repository의 Commit History에서 확인 가능하다.
@@ -130,6 +138,7 @@ git reset {option} {되돌아갈 시점의 commit hash값}
 #### 예시
 ```
 git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07
+git push -f origin main
 ```
 
 <br/>
