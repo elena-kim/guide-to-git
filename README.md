@@ -114,8 +114,9 @@ _TBD.._
 <br />
 
 ## Reset
-지정한 commit 이후의 모든 commit history가 삭제된다.  
-예를 들어, 아래 사진에서 노란색으로 표시된 커밋을 되돌아갈 시점으로 지정한다면 빨간색으로 표시된 3개의 커밋 기록이 삭제된다.
+> 지정한 commit 이후의 모든 commit history가 삭제된다.  
+<br>
+예를 들어, 아래 사진에서 노란색으로 표시된 커밋을 되돌아갈 시점으로 지정한다면 빨간색으로 표시된 3개의 커밋 기록이 삭제된다.  
 
 ![reset](https://user-images.githubusercontent.com/74305823/137444338-a235fbd5-1ca3-479f-90f5-4e5ffe10aaae.png)
 
