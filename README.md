@@ -144,7 +144,7 @@ git push -f origin main
 
 <br/>
     
-## Branch Switch
+## Switch Branch
 ```
 git checkout "branch name"
 ```
