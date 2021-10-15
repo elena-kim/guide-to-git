@@ -111,10 +111,27 @@ git log --graph --oneline --all
 ```
 _TBD.._
 
+<br />
+
 ## Reset
 ```
-git checkout . 한 다음에 다시 돌리는 방법: git reset (검증해봐야함)
+git reset {option} {되돌아갈 시점의 commit hash값}
 ```
+
+#### Option
+- hard: 파일을 포함해서 모든 히스토리를 싹 날려버린다. 
+- soft: 히스토리만 삭제하고 파일은 stage 상태 그대로 남겨둔다. 
+- mixed: 디폴트 옵션으로, 히스토리를 삭제한 후 파일도 그대로 남아있지만 stage 상태는 아니기에 다시 add를 해야 추적이 가능하다.
+
+#### hash값 확인
+해당 Repository의 Commit History에서 확인 가능하다.
+![hash](https://user-images.githubusercontent.com/74305823/137443208-51f07446-000e-4ed3-873c-8a0cd5635bf4.png)
+
+#### 예시
+```
+git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07
+```
+
 <br/>
     
 ## Branch Switch
