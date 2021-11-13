@@ -153,6 +153,12 @@ git push -f {remote name} {branch name}
 - soft: 히스토리만 삭제하고 파일은 stage 상태 그대로 남겨둔다. 
 - mixed: 디폴트 옵션으로, 히스토리를 삭제한 후 파일도 그대로 남아있지만 stage 상태는 아니기에 다시 add를 해야 추적이 가능하다.
 
+## TBD
+TBD.. 커밋 리스트 조회
+```
+git reflog
+```
+
 
 #### hash값 확인
 해당 Repository의 Commit History에서 확인 가능하다.
