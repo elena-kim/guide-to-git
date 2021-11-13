@@ -159,7 +159,6 @@ TBD.. 커밋 리스트 조회
 git reflog
 ```
 
-
 #### hash값 확인
 해당 Repository의 Commit History에서 확인 가능하다.
 ![hash](https://user-images.githubusercontent.com/74305823/137443208-51f07446-000e-4ed3-873c-8a0cd5635bf4.png)
