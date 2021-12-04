@@ -145,7 +145,7 @@ _TBD.._
 #### 명령어 
 ```
 git reset {option} {되돌아갈 시점의 commit hash값}
-git push -f {remote name} {branch name}
+git push -f {remote name}(origin) {branch name}
 ```
 
 #### Option
