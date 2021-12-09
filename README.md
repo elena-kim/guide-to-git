@@ -9,8 +9,7 @@
   이 레포지토리는 DevNcore팀이 관리하고 있습니다.
   
   <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
- 
-  <br />
+
   <br />
  
   <p align="center">
@@ -22,8 +21,8 @@
 
 <br />
 
-## Overview
-- [Account](#account)
+## Contents
+- [사용자 정보](#사용자-정보)
 - [Clone](#clone)
 - [Commit](#commit)
 - [Config](#config)
@@ -34,25 +33,27 @@
 - [Auto Login](#auto-login)
 - [Git Avatar](#git-avatar)
 
-## Account 
-- ### `Regist`
-If you do a commit for the first time, you should check your information. <br>
-You can enter your `email` or `user-name` on the first line.
+<br />
+
+## 사용자 정보 
+
+Git 설치 후 가장 먼저 해야 하는 것은 사용자 이름과 이메일 주소를 설정하는 것입니다. <br>
+본인의 모든 저장소에 동일한 Commit 정보를 적용하려면 아래 명령어를 차례로 입력하면 됩니다.
+
 ```git
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
-:point_right: _If you want to use different account for each repository, just remove "--global" option._
-<br />
 
-- ### `Change`
-It is same with [`Regist Account`](#regist)
+<br>
+
+만약 하나의 저장소에만 특정 사용자 정보를 저장하고 싶다면 `--global`을 `--local`로 변경하거나 생략합니다. <br>
+`--local` 설정은 `--global`보다 우선적으로 적용됩니다.
+
 ```git
-git config --global user.email "other@example.com"
-git config --global user.name "Other Name"
+git config (--local) user.email "you@example.com"
+git config (--local) user.name "Your Name"
 ```
-다른 github 계정을 사용하고 싶을 때 cmd창에서 `Regist Account` 와 동일하게 입력
-계정바꿔줬는데도 clone / push 등이 안되면 windows 자격증명에서 git 관련된 자격 증명 제거
 
 <br />
 
