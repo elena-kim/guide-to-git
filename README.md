@@ -58,16 +58,22 @@ git config (--local) user.name "Your Name"
 <br />
 
 ## Clone
-```git
-git clone https://github.com/devncore/the-easiest-git
+
+GitHub에서 소스를 최초로 내려받을 때 git clone 명령어를 사용합니다.  
+Clone을 하기 위해서는 Git 저장소의 주소를 알아야 하는데, 주소 형식은 아래와 같습니다.
+
 ```
-#### :point_right: _How to apply `gitignore` for the first time after setting it up?_
-At first, the gitignore file exists unconditionally.
-```git
-git rm -r --cached .
-git add .
-git commit -m "Apply .gitignore"
+https://github.com/[USERNAME]/[REPOSITORY_NAME].git
 ```
+
+<br>
+
+예를 들어, 이 레포지토리를 Clone 하고 싶다면 아래와 같이 입력하면 됩니다.
+
+```git
+git clone https://github.com/devncore/the-easiest-git.git
+```
+
 <br />  
 
 ## Commit
