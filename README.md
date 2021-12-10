@@ -77,6 +77,36 @@ git clone https://github.com/devncore/the-easiest-git.git
 <br />  
 
 ## Commit
+Git의 Repository 구조는 **작업폴더(Working Direcory), 인덱스(Staging Area), 저장소(Head Repository)** 로 나눌 수 있습니다. 
+
+![git](https://user-images.githubusercontent.com/74305823/145518503-56b2517d-8816-4dac-b2c1-65939d0be01b.png)
+
+저장소에 Commit하기 위해서는 **`git add`** 명령어를 통해 추가 및 변경된 파일을 스테이징시켜야 합니다. <br>
+
+```csharp
+// 특정 파일만 Stage
+git add [파일명]
+
+// 변경사항 있는 모든 파일 Stage
+git add .
+
+// Stage된 파일 Unstage 
+git rm --cached [파일명]
+```
+
+<br>
+
+스테이징을 완료했다면 **`git commit -m [커밋 메시지]`** 명령어를 통해 저장소에 변경 내용을 적용합니다. <br>
+이때 **`-m`** 앞에 **`-a`** 옵션을 추가하면 add와 commit을 한번에 할 수 있기 때문에 **`git add`** 를 생략할 수 있습니다.
+
+```csharp
+// -a 옵션 미적용
+git commit -m "Fix Error"
+
+// -a 옵션 적용
+git commit -a -m "Fix Error"
+```
+
 - ### `Edit Last Commit`
 ```
 git commit --amend
