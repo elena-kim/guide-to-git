@@ -139,24 +139,36 @@ git commit --amend --no-edit
 <br>  
 
 #### 3. Commit Author 수정하기
-예를 들어, 2번째 커밋의 Author를 바꾸고 싶다면 아래와 같이 입력합니다.
+가장 최근 커밋이 아닌 예전 커밋을 수정하려면 **`rebase`** 명령을 이용해 수정할 수 있습니다. 어떤 시점부터 HEAD까지 Rebase할 것인지는 `HEAD~2`나 `HEAD~3` 등의 인자를 넘겨주면 됩니다. 예를 들어, 2번째 커밋의 Author를 바꾸고 싶다면 아래와 같이 입력합니다.
 
 ```
 git rebase -i HEAD~2
 ```
-![image](https://user-images.githubusercontent.com/74305823/135565874-99e8ae67-4ee5-4de7-a440-157c90ed7fb0.png)
 
-vi화면이 뜨면 입력모드(i)로 진입 후, 변경할 커밋의 'pick'을 'e'로 바꿔주고 저장&종료(:wq)합니다.
+<br>  
 
-![image](https://user-images.githubusercontent.com/74305823/135565972-ffd5c078-dd02-4dec-b84d-b2fca2a16a37.png)
+이때 rebase의 결과는 log 명령과 반대의 순서로 나타납니다. 즉, rebase 결과에서 제일 위에 있는 것이 더 오래된 커밋입니다.
+|rebase|log|
+|:--:|:---:|
+|<img width="600" src="https://user-images.githubusercontent.com/74305823/145529917-f708132a-59f5-4d50-81de-1881f396a9e6.png">|<img width="669" src="https://user-images.githubusercontent.com/74305823/145530015-ca277f12-b19e-4f19-aa3c-e74b6a062153.png">|
 
-아래 명령어로 Author 정보를 입력합니다.
+<br>  
+
+**`rebase`** 명령을 통해 vi화면이 뜨면 입력모드(i)로 진입 후, 변경할 커밋의 'pick'을 'e'로 바꿔주고 저장&종료(:wq)합니다. 그후에 아래 명령어로 변경할 Author 정보를 입력합니다.
 ```
 git commit --amend --author="user.name <user.email>"
 ```
-![image](https://user-images.githubusercontent.com/74305823/135566231-bf30fb9d-5b8f-4569-9e5c-b783afcfff84.png)
+<img width="565" alt="스크린샷 2021-12-10 오후 3 41 50" src="https://user-images.githubusercontent.com/74305823/145530588-39ccbcff-df3d-4e19-9a23-fe04c9b5bdc4.png">
 
-아래 명령어를 통해 Repository에 변경내용을 적용합니다.
+<br>  
+
+이미 Push된 커밋이라면 `force`를 통해 수정된 커밋을 강제로 Push해줘야 합니다. 하지만 앞서 말했듯 이미 Push된 커밋을 수정하는 것은 지양해야 하며, 특히 `force pushing`은 Push된 커밋 로그를 갖고 있던 다른 팀원들이 로그를 수동으로 수정해줘야 하기 때문에 최대한 사용하지 않아야 합니다.
+
+> _**We strongly discourage force pushing**, since this changes the history of your repository. If you force push, people who have already cloned your repository will have to manually fix their local history. For more information, see "Recovering from upstream rebase" in the Git manual._
+
+<br>  
+
+아래 명령을 통해 Remote에 변경사항을 적용할 수 있습니다.
 ```
 git rebase --continue
 git push -f origin main
