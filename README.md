@@ -25,6 +25,7 @@
 - [사용자 정보](#사용자-정보)
 - [Clone](#clone)
 - [Commit](#commit)
+- [Commit 수정](#commit-수정)
 - [Config](#config)
 - [Git Log](#git-log)
 - [Log Graph](#log-graph)
@@ -107,19 +108,39 @@ git commit -m "Fix Error"
 git commit -a -m "Fix Error"
 ```
 
-- ### `Edit Last Commit`
-```
+<br>
+
+## Commit 수정
+Git은 로컬에 모든 버전관리 데이터를 복사해두고 있기 때문에 자유롭게 수정할 수 있습니다. 하지만 [Git 공식 문서](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)에도 쓰여 있듯, 이미 Push된 Commit에 대해서는 수정 작업을 지양해야 하며, 고쳐야 할 부분이 생겼다면 새로 수정작업을 추가하도록 합니다.
+
+#### 1. 마지막 커밋 메시지 수정하기
+**`git commit --amend`** 명령어를 통해 수정 가능하며, `-m "new message"`를 붙이면 텍스트 편집기 실행 없이 바로 커밋 메시지를 수정할 수 있습니다.
+
+```csharp
+// 텍스트 편집기 실행
 git commit --amend
-git commit --amend -m "new message" # direct
+
+// 텍스트 편집기 실행X
+git commit --amend -m "new message" 
 ```
-    
-- ### `Last Commit Edit Save (Exit)`
+  
+<br>  
+
+#### 2. 나중에 수정한 파일을 마지막 커밋에 밀어넣기
+파일을 수정하고 **`git add`** 명령으로 Stage 시킨 후 **`git commit --amend`** 명령으로 커밋하면 커밋 자체가 수정되면서 추가로 수정사항을 밀어넣을 수 있습니다. 이때 SHA-1 값이 바뀌므로 과거의 커밋을 변경할 때 주의해야 합니다. <br>
+
+만약 변경 내용이 많다면 커밋 메시지가 해당 내용을 담을 수 있도록 수정할 필요가 있습니다. 반면 변경 내용이 사소하거나 커밋 메시지가 충분히 반영하고 있다면 **`--no edit`** 옵션을 통해 커밋 메시지 수정을 건너뛸 수 있습니다.
+
 ```
-`:wq` + `Enter`
+git add new-file
+git commit --amend --no-edit
 ```
-    
-- ### `Edit Commit Author`
+
+<br>  
+
+#### 3. Commit Author 수정하기
 예를 들어, 2번째 커밋의 Author를 바꾸고 싶다면 아래와 같이 입력합니다.
+
 ```
 git rebase -i HEAD~2
 ```
