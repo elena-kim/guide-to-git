@@ -207,7 +207,7 @@ git log
 - `graph` : 브랜치를 그래프로 볼 수 있으며, `git log --oneline --decorate --graph --all` 명령어를 사용하면 main 브랜치에서 파생된 다른 브랜치도 확인할 수 있습니다. 
 
 ```
-git log --date=short --pretty=format:%h,%an,%ae,%s > history.csv
+git log --date=short --pretty=format:%h,%an,%ae,%ad,%s > history.csv
 ```
 
 <br/>
