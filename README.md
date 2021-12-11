@@ -201,14 +201,10 @@ git log
 가장 위에 있는 커밋이 최근 커밋이고 아래로 갈수록 오래된 커밋입니다. 커밋은 여러가지 정보들을 함께 저장하고 있는데 각 커밋의 SHA-1, Author 정보, 커밋 날짜, 커밋 메세지 등을 차례로 보여줍니다. 
 
 ### 옵션
-- `-number`
-- `--pretty`
-
-#### Log Graph
-
-```git
-git log --graph --oneline --all
-```
+- `-number` : number에 숫자를 입력하면 가장 최근 커밋에서 해당 개수만큼의 커밋 기록이 보입니다.
+- `--pretty` : `--pretty=oneline`, `--pretty=format:"%H, %an` 등 원하는 포맷을 설정해 출력할 수 있습니다.
+- `p`, `--patch` : 커밋들 간의 차이점을 볼 수 있습니다.
+- `graph` : 브랜치를 그래프로 볼 수 있으며, `git log --oneline --decorate --graph --all` 명령어를 사용하면 main 브랜치에서 파생된 다른 브랜치도 확인할 수 있습니다. 
 
 <br/>
        
