@@ -28,7 +28,6 @@
 - [Commit 수정](#commit-수정)
 - [Config](#config)
 - [Git Log](#git-log)
-- [Log Graph](#log-graph)
 - [Reset](#reset)
 - [Switch Branch](#switch-branch)
 - [Auto Login](#auto-login)
@@ -191,20 +190,28 @@ Your git configurations are saved in the `.gitconfig` file. And you can find thi
 <br/>
     
 ## Git Log
+해당 레포지토리의 커밋 기록을 **`git log`** 명령어를 통해 확인할 수 있습니다.
+
 ```
 git log
 ```
-<br/>
-       
-## Log Graph
+
+<img width="669" src="https://user-images.githubusercontent.com/74305823/145530015-ca277f12-b19e-4f19-aa3c-e74b6a062153.png">
+
+가장 위에 있는 커밋이 최근 커밋이고 아래로 갈수록 오래된 커밋입니다. 커밋은 여러가지 정보들을 함께 저장하고 있는데 각 커밋의 SHA-1, Author 정보, 커밋 날짜, 커밋 메세지 등을 차례로 보여줍니다. 
+
+### 옵션
+- `-number`
+- `--pretty`
+
+#### Log Graph
 
 ```git
 git log --graph --oneline --all
 ```
-_TBD.._
 
-<br />
-
+<br/>
+       
 ## Reset
 > 지정한 commit 이후의 모든 commit history가 삭제된다.  
 <br>
