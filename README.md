@@ -172,15 +172,18 @@ git rebase --continue
 git push -f origin main   # git push -f [remote name] [branch name]
 ```
  
+<br> 
+ 
 #### 4. Commit History 삭제하기
 `reset` 명령어를 통해 지정한 Commit 이후의 모든 Commit History를 삭제할 수 있습니다. <br>
 예를 들어, 아래 사진에서 노란색으로 표시된 커밋을 되돌아갈 시점으로 지정한다면 빨간색으로 표시된 3개의 커밋 기록이 삭제됩니다.
 
 ![reset](https://user-images.githubusercontent.com/74305823/137444338-a235fbd5-1ca3-479f-90f5-4e5ffe10aaae.png)
 
-#### 명령어 
-```
-git reset {option} {되돌아갈 시점의 commit hash값}
+<br>
+
+```python
+git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07   # git reset {option} {되돌아갈 시점의 commit hash값}
 ```
 
 #### 옵션
@@ -189,7 +192,8 @@ git reset {option} {되돌아갈 시점의 commit hash값}
 - mixed: 디폴트 옵션으로, 히스토리를 삭제한 후 파일도 그대로 남아있지만 stage 상태는 아니기에 다시 add를 해야 추적이 가능합니다.
 
 <br>
-[3. Commit Author 수정하기](#3-commit-author-수정하기) 와 마찬가지로 이미 Push된 커밋은 아래 명령어를 통해 강제로 변경해줍니다.
+
+[**Commit Author 수정하기**](#3-commit-author-수정하기)와 마찬가지로 이미 Push된 커밋은 아래 명령어를 통해 강제로 변경해줍니다.
 
 ```python
 git push -f origin main  # git push -f [remote name] [branch name]
@@ -238,16 +242,6 @@ git log --date=short --pretty=format:%h,%an,%ae,%ad,%s > history.csv
 TBD.. 커밋 리스트 조회
 ```
 git reflog
-```
-
-#### hash값 확인
-해당 Repository의 Commit History에서 확인 가능하다.
-![hash](https://user-images.githubusercontent.com/74305823/137443208-51f07446-000e-4ed3-873c-8a0cd5635bf4.png)
-
-#### 예시
-```
-git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07
-git push -f origin main
 ```
 
 <br/>
