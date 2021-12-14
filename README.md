@@ -130,7 +130,7 @@ git commit --amend -m "new message"
 만약 변경 내용이 많다면 커밋 메시지가 해당 내용을 담을 수 있도록 수정할 필요가 있습니다. 반면 변경 내용이 사소하거나 커밋 메시지가 충분히 반영하고 있다면 **`--no edit`** 옵션을 통해 커밋 메시지 수정을 건너뛸 수 있습니다.
 
 ```
-git add new-file
+git add [파일명]
 git commit --amend --no-edit
 ```
 
