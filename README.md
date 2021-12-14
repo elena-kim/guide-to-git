@@ -28,7 +28,6 @@
 - [Commit 수정](#commit-수정)
 - [Config](#config)
 - [Git Log](#git-log)
-- [Reset](#reset)
 - [Switch Branch](#switch-branch)
 - [Auto Login](#auto-login)
 - [Git Avatar](#git-avatar)
@@ -168,9 +167,32 @@ git commit --amend --author="user.name <user.email>"
 <br>  
 
 아래 명령을 통해 Remote에 변경사항을 적용할 수 있습니다.
-```
+```python
 git rebase --continue
-git push -f origin main
+git push -f origin main   # git push -f [remote name] [branch name]
+```
+ 
+#### 4. Commit History 삭제하기
+`reset` 명령어를 통해 지정한 Commit 이후의 모든 Commit History를 삭제할 수 있습니다. <br>
+예를 들어, 아래 사진에서 노란색으로 표시된 커밋을 되돌아갈 시점으로 지정한다면 빨간색으로 표시된 3개의 커밋 기록이 삭제됩니다.
+
+![reset](https://user-images.githubusercontent.com/74305823/137444338-a235fbd5-1ca3-479f-90f5-4e5ffe10aaae.png)
+
+#### 명령어 
+```
+git reset {option} {되돌아갈 시점의 commit hash값}
+```
+
+#### 옵션
+- hard: 파일을 포함한 모든 히스토리를 전부 삭제합니다. 
+- soft: 히스토리만 삭제하고 파일은 stage 상태 그대로 남아 있습니다. 
+- mixed: 디폴트 옵션으로, 히스토리를 삭제한 후 파일도 그대로 남아있지만 stage 상태는 아니기에 다시 add를 해야 추적이 가능합니다.
+
+<br>
+[3. Commit Author 수정하기](#3-commit-author-수정하기) 와 마찬가지로 이미 Push된 커밋은 아래 명령어를 통해 강제로 변경해줍니다.
+
+```python
+git push -f origin main  # git push -f [remote name] [branch name]
 ```
 
 <br />
@@ -211,25 +233,7 @@ git log --date=short --pretty=format:%h,%an,%ae,%ad,%s > history.csv
 ```
 
 <br/>
-       
-## Reset
-> 지정한 commit 이후의 모든 commit history가 삭제된다.  
-<br>
-예를 들어, 아래 사진에서 노란색으로 표시된 커밋을 되돌아갈 시점으로 지정한다면 빨간색으로 표시된 3개의 커밋 기록이 삭제된다.  
-
-![reset](https://user-images.githubusercontent.com/74305823/137444338-a235fbd5-1ca3-479f-90f5-4e5ffe10aaae.png)
-
-#### 명령어 
-```
-git reset {option} {되돌아갈 시점의 commit hash값}
-git push -f {remote name}(origin) {branch name}
-```
-
-#### Option
-- hard: 파일을 포함해서 모든 히스토리를 싹 날려버린다. 
-- soft: 히스토리만 삭제하고 파일은 stage 상태 그대로 남겨둔다. 
-- mixed: 디폴트 옵션으로, 히스토리를 삭제한 후 파일도 그대로 남아있지만 stage 상태는 아니기에 다시 add를 해야 추적이 가능하다.
-
+      
 ## TBD
 TBD.. 커밋 리스트 조회
 ```
