@@ -27,6 +27,7 @@
 - [Commit](#commit)
 - [Commit 수정](#commit-수정)
 - [Git Log](#git-log)
+- [Git 복구](#git-복구)
 - [Switch Branch](#switch-branch)
 - [Auto Login](#auto-login)
 - [Git Avatar](#git-avatar)
@@ -82,7 +83,7 @@ GitHub에서 소스를 최초로 내려받을 때 git clone 명령어를 사용�
 Clone을 하기 위해서는 Git 저장소의 주소를 알아야 하는데, 주소 형식은 아래와 같습니다.
 
 ```
-https://github.com/[USERNAME]/[REPOSITORY_NAME].git
+https://github.com/<USERNAME>/<REPOSITORY_NAME>.git
 ```
 
 <br>
@@ -104,13 +105,13 @@ Git의 Repository 구조는 **작업폴더(Working Direcory), 인덱스(Staging 
 
 ```csharp
 // 특정 파일만 Stage
-git add [파일명]
+git add <파일명>
 
 // 변경사항 있는 모든 파일 Stage
 git add .
 
 // Stage된 파일 Unstage 
-git rm --cached [파일명]
+git rm --cached <파일명>
 ```
 
 <br>
@@ -150,7 +151,7 @@ git commit --amend -m "new message"
 만약 변경 내용이 많다면 커밋 메시지가 해당 내용을 담을 수 있도록 수정할 필요가 있습니다. 반면 변경 내용이 사소하거나 커밋 메시지가 충분히 반영하고 있다면 **`--no edit`** 옵션을 통해 커밋 메시지 수정을 건너뛸 수 있습니다.
 
 ```
-git add [파일명]
+git add <파일명>
 git commit --amend --no-edit
 ```
 
@@ -189,7 +190,7 @@ git commit --amend --author="user.name <user.email>"
 아래 명령을 통해 Remote에 변경사항을 적용할 수 있습니다.
 ```python
 git rebase --continue
-git push -f origin main   # git push -f [remote name] [branch name]
+git push -f origin main   # git push -f <remote name> <branch name>
 ```
  
 <br> 
@@ -203,7 +204,7 @@ git push -f origin main   # git push -f [remote name] [branch name]
 <br>
 
 ```python
-git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07   # git reset {option} {되돌아갈 시점의 commit hash값}
+git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07   # git reset <option> <되돌아갈 시점의 commit hash값>
 ```
 
 #### 옵션
@@ -220,7 +221,7 @@ git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07   # git reset {option}
 [**Commit Author 수정하기**](#3-commit-author-수정하기)와 마찬가지로 이미 Push된 커밋은 아래 명령어를 통해 강제로 변경할 수 있습니다.
 
 ```python
-git push -f origin main  # git push -f [remote name] [branch name]
+git push -f origin main  # git push -f <remote name> <branch name>
 ```
 
 <br />
@@ -248,18 +249,30 @@ git log --date=short --pretty=format:%h,%an,%ae,%ad,%s > history.csv
 
 <br/>
       
-## TBD
-TBD.. 커밋 리스트 조회
-```
-git reflog
+## Git 복구
+`git rebase` 또는 `git reset` 등으로 커밋을 잘못 삭제했을 때 **`git reflog`** 명령을 통해 Git 이력을 확인하여 복구할 수 있습니다. <br>
+`reflog`는 참조(reference)의 기록(log)을 보여주는 명령으로, 각 커밋의 이력과 Hash Id를 확인할 수 있습니다.
+
+#### commit 복구하기
+
+```python
+git reflog   
+git reset --hard <hash id>
 ```
 
+#### Branch 복구하기
+
+```python
+git reflog    
+git checkout -b <삭제한 브랜치명> <hash id>
+```
 <br/>
     
 ## Switch Branch
 ```
 git checkout "branch name"
 ```
+
 <br/>
     
 ## Auto Login
