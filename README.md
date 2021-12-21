@@ -37,11 +37,32 @@
 ## Config
 **`git config`** 명령어를 통해 설정 내용을 확인하고 변경할 수 있습니다. Git 설정 파일은 아래 세 가지가 있습니다.
 
-  1. `etc/gitconfig` 파일 : 시스템의 모든 사용자와 모든 저장소에 적용되는 설정으로, `git config --system` 옵션으로 이 파일을 읽고 쓸 수 있습니다. 이 파일은 시스템 전체 설정 파일이기 때문에 수정하려면 시스템의 관리자 권한이 필요합니다.
-  2. `~/.gitconfig`, `~/.config/git/config` 파일 : 특정 사용자(현재 사용자)에게만 적용되는 설정으로, `git config --global` 옵션으로 이 파일을 읽고 쓸 수 있습니다. 특정 사용자의 모든 저장소 설정에 적용됩니다.
-  3. `.git/config` : 이 파일은 Git 디렉토리 안에 있는 특정 저장소에만 적용됩니다. `--local` 옵션을 통해 적용할 수 있지만 기본 옵션이므로 생략해도 됩니다.
-
-각 설정에 대한 우선순위는 **local > global > system** 입니다.
+<table>
+  <tbody>
+    <tr>
+      <td align="center"> <b>파일</b> </td>
+      <td align="center"> <code>etc/gitconfig</code> </td>
+      <td align="center"> <code>~/.gitconfig</code> <br> <code>~/.config/git/config</code> </td>
+      <td align="center"> <code>.git/config</code> </td>
+    </tr>
+    <tr>
+      <td align="center"> <b>옵션</b> </td>
+      <td align="center"> <code>git config --system</code> </td>
+      <td align="center"> <code>git config --global</code> </td>
+      <td align="center"> <code>git config (--local)</code> </td>
+    </tr>
+    <tr>
+      <td align="center"> <b>적용범위</b> </td>
+      <td align="center"> 시스템의 모든 사용자 <br> 모든 저장소 </td>
+      <td align="center"> 특정 사용자(현재 사용자) <br> 모든 저장소 </td>
+      <td align="center"> 특정 사용자(현재 사용자) <br> 특정 저장소 </td>
+    </tr>
+    <tr>
+      <td align="center"> <b>우선 적용순위</b> </td>
+      <td align="center" colspan="3"> <b> local > global > system </b></td>
+    </tr>
+  </tbody>
+</table>  
 
 #### Config 설정하기
 
