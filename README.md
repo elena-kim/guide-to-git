@@ -22,11 +22,10 @@
 <br />
 
 ## Contents
-- [사용자 정보](#사용자-정보)
+- [Config](#config)
 - [Clone](#clone)
 - [Commit](#commit)
 - [Commit 수정](#commit-수정)
-- [Config](#config)
 - [Git Log](#git-log)
 - [Switch Branch](#switch-branch)
 - [Auto Login](#auto-login)
@@ -34,7 +33,16 @@
 
 <br />
 
-## 사용자 정보 
+## Config
+**`git config`** 명령어를 통해 설정 내용을 확인하고 변경할 수 있습니다. Git 설정 파일은 아래 세 가지가 있습니다.
+
+  1. `etc/gitconfig` 파일 : 시스템의 모든 사용자와 모든 저장소에 적용되는 설정으로, `git config --system` 옵션으로 이 파일을 읽고 쓸 수 있습니다. 이 파일은 시스템 전체 설정 파일이기 때문에 수정하려면 시스템의 관리자 권한이 필요합니다.
+  2. `~/.gitconfig`, `~/.config/git/config` 파일 : 특정 사용자(현재 사용자)에게만 적용되는 설정으로, `git config --global` 옵션으로 이 파일을 읽고 쓸 수 있습니다. 특정 사용자의 모든 저장소 설정에 적용됩니다.
+  3. `.git/config` : 이 파일은 Git 디렉토리 안에 있는 특정 저장소에만 적용됩니다. `--local` 옵션을 통해 적용할 수 있지만 기본 옵션이므로 생략해도 됩니다.
+
+각 설정에 대한 우선순위는 **local > global > system** 입니다.
+
+#### Config 설정하기
 
 Git 설치 후 가장 먼저 해야 하는 것은 사용자 이름과 이메일 주소를 설정하는 것입니다. <br>
 본인의 모든 저장소에 동일한 Commit 정보를 적용하려면 아래 명령어를 차례로 입력하면 됩니다.
@@ -52,6 +60,18 @@ git config --global user.name "Your Name"
 ```git
 git config (--local) user.email "you@example.com"
 git config (--local) user.name "Your Name"
+```
+
+#### 설정 내용 확인하기
+`git config --list` 명령을 통해 전체 Config 리스트를 확인할 수 있습니다. <br>
+만약 특정 Key에 대한 설정 값을 확인하고 싶다면 `git config [key]` 명령을 사용하면 됩니다.
+
+```csharp
+// 전체 설정 내용 확인
+git config --list
+
+// 특정 설정 내용 확인
+git config user.name
 ```
 
 <br />
@@ -73,7 +93,7 @@ https://github.com/[USERNAME]/[REPOSITORY_NAME].git
 git clone https://github.com/devncore/the-easiest-git.git
 ```
 
-<br />  
+<br/>
 
 ## Commit
 Git의 Repository 구조는 **작업폴더(Working Direcory), 인덱스(Staging Area), 저장소(Head Repository)** 로 나눌 수 있습니다. 
@@ -201,20 +221,6 @@ git push -f origin main  # git push -f [remote name] [branch name]
 
 <br />
 
-## Config
-You can check your git configurations in cmd by entering below line.
-```
-git config --list
-```
-
-Your git configurations are saved in the `.gitconfig` file. And you can find this file in your home directory.
-```git
-[user]
-	name = elena.kim
-	email = elena.kim@ncoresoft.net
-```
-<br/>
-    
 ## Git Log
 해당 레포지토리의 커밋 기록을 **`git log`** 명령어를 통해 확인할 수 있습니다.
 
@@ -224,9 +230,9 @@ git log
 
 <img width="669" src="https://user-images.githubusercontent.com/74305823/145530015-ca277f12-b19e-4f19-aa3c-e74b6a062153.png">
 
-가장 위에 있는 커밋이 최근 커밋이고 아래로 갈수록 오래된 커밋입니다. 커밋은 여러가지 정보들을 함께 저장하고 있는데 각 커밋의 SHA-1, Author 정보, 커밋 날짜, 커밋 메세지 등을 차례로 보여줍니다. 
+가장 위에 있는 커밋이 최근 커밋이고 아래로 갈수록 오래된 커밋입니다. 각 커밋의 SHA-1, Author 정보, 커밋 날짜, 커밋 메세지 등을 확인할 수 있습니다. 
 
-### 옵션
+#### 옵션
 - `-number` : number에 숫자를 입력하면 가장 최근 커밋에서 해당 개수만큼의 커밋 기록이 보입니다.
 - `--pretty` : `--pretty=oneline`, `--pretty=format:"%H, %an` 등 원하는 포맷을 설정해 출력할 수 있습니다.
 - `p`, `--patch` : 커밋들 간의 차이점을 볼 수 있습니다.
