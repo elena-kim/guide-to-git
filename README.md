@@ -204,7 +204,8 @@ git push -f origin main   # git push -f <remote name> <branch name>
 <br>
 
 ```python
-git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07   # git reset <option> <되돌아갈 시점의 commit hash값>
+# git reset <option> <되돌아갈 시점의 commit hash값>
+git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07  
 ```
 
 #### 옵션
