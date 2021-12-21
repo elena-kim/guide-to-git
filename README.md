@@ -86,7 +86,7 @@ git config (--local) user.name "Your Name"
 
 #### 설정 내용 확인하기
 `git config --list` 명령을 통해 전체 Config 리스트를 확인할 수 있습니다. <br>
-만약 특정 Key에 대한 설정 값을 확인하고 싶다면 `git config [key]` 명령을 사용하면 됩니다.
+만약 특정 Key에 대한 설정 값을 확인하고 싶다면 `git config <key>` 명령을 사용하면 됩니다.
 
 ```csharp
 // 전체 설정 내용 확인
