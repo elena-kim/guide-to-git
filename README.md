@@ -209,8 +209,12 @@ git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07   # git reset {option}
 #### 옵션
 - `hard` : 파일을 포함한 모든 히스토리를 전부 삭제합니다. 
 - `soft` : 히스토리만 삭제하고 파일은 Stage 상태 그대로 남아 있습니다. 
-- `mixed` : 디폴트 옵션으로, 히스토리를 삭제한 후 파일도 그대로 남아있지만 Stage 상태는 아니기에 다시 add를 해야 추적이 가능합니다.
+- `mixed` : 디폴트 옵션으로, 히스토리를 삭제한 후 파일은 남아있지만 Stage 상태는 아니기에 다시 add를 해야 추적이 가능합니다.
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74305823/146884108-39c45e31-018f-42c9-90ae-e7d8d6349402.png" width="700"/>
+</div>
+  
 <br>
 
 [**Commit Author 수정하기**](#3-commit-author-수정하기)와 마찬가지로 이미 Push된 커밋은 아래 명령어를 통해 강제로 변경할 수 있습니다.
