@@ -193,7 +193,7 @@ git reset --hard d35780b71a8725e39f45d3b84496a37102f6de07   # git reset {option}
 
 <br>
 
-[**Commit Author 수정하기**](#3-commit-author-수정하기)와 마찬가지로 이미 Push된 커밋은 아래 명령어를 통해 강제로 변경해줍니다.
+[**Commit Author 수정하기**](#3-commit-author-수정하기)와 마찬가지로 이미 Push된 커밋은 아래 명령어를 통해 강제로 변경할 수 있습니다.
 
 ```python
 git push -f origin main  # git push -f [remote name] [branch name]
