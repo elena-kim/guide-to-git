@@ -31,6 +31,7 @@
 - [Auto Login](#auto-login)
 - [Git Avatar](#git-avatar)
 - [Git Branch](#git-branch)
+- [Git Push Error](#git-push-error)
 
 <br />
 
@@ -368,36 +369,23 @@ git merge lucas
 git branch -d lucas
 ```
 
-**Git Push Error**   
->fatal: The current branch lucas has no upstream branch. <br />
-> To push the current branch and set the remote as upstream, use
-> git push --set-upstream origin lucas
+## Git Push Error
+아래의 메세지는 git push 명령어를 실행 하였을 때 나는 오류 메세지이다.
+원인은 원격저장소 이름을 입력하지 않았기 때문이며 원격저장소 이름을 확인후 원격저장소명을 명시해 Push 한다.
+```
+fatal: The current branch lucas has no upstream branch. <br />
+To push the current branch and set the remote as upstream, use
+git push --set-upstream origin lucas
+```
 
-git push 명령어를 실행 했을때 나는 오류 메세지이다. <br /> 
-원인은 원격저장소 이름을 입력하지 않았기 때문이고 원격저장소 이름을 확인후 원격저장소명을 명시해 준다.
-
-현재 저장된 원격저장소명 확인
+**현재 저장된 원격저장소명 확인**
 ```
 git remote -v
 ```
 
-원격저장소명을 명시하여 push 
+**원격저장소명을 명시하여 push**
 ```
 git push origin lucas
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
