@@ -383,7 +383,7 @@ git push --set-upstream origin lucas
 git remote -v
 ```
 
-**원격저장소명을 명시하여 push**
+**원격저장소명을 명시하여 push**   git push <원격저장소명> <브랜치명>
 ```
 git push origin lucas
 ```
