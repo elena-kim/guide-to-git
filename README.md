@@ -373,6 +373,17 @@ git merge lucas
 ```
 git branch -d lucas
 ```
+**Branch 종류**
+브랜치 종류에는 5가지가 존재하며 메인 Branch와 보조 Branch를 포함한다.
+
+| Master Branch | Develop Branch | Feature branch | Release Branch | Hotfix Branch |
+|:-------------:|:--------------:|:--------------:|:--------------:|:-------------:|
+| 제품으로 출시될 수 있는 브랜치 | 
+다음 출시 버전을 개발하는 브랜치 | 
+기능을 개발하는 브랜치 (Local) |
+이번 출시 버전을 준비하는 브랜치 |
+출시 버전에서 발생한 버그를 수정 하는 브랜치 |
+
 
 ## Git Push Error
 아래의 메세지는 git push 명령어를 실행 하였을 때 나는 오류 메세지이다.
