@@ -31,6 +31,7 @@
 - [Auto Login](#auto-login)
 - [Git Avatar](#git-avatar)
 - [Git Branch](#git-branch)
+- [Git Branch 원격저장소 삭제](#Branch-원격저장소-삭제)
 - [Git Push Error](#git-push-error)
 
 <br />
@@ -389,6 +390,8 @@ git branch -D lucas
 | 제품으로 출시될 수 있는 브랜치 | 다음 출시 버전을 개발하는 브랜치 |  기능을 개발하는 브랜치 (Local) | 이번 출시 버전을 준비하는 브랜치 | 출시 버전에서 발생한 버그를 수정 하는 브랜치 |     
 
 <br />
+
+## Branch 원격저장소 삭제
 
 
 ## Git Push Error
