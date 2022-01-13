@@ -393,6 +393,12 @@ git branch -D lucas
 
 ## Branch 원격저장소 삭제
 
+로컬이 아닌 git 원격저장소 브랜치를 삭제 합니다.
+
+```
+git push origin --delete lucas
+```
+
 
 ## Git Push Error
 아래의 메세지는 git push 명령어를 실행 하였을 때 나는 오류 메세지이다.
