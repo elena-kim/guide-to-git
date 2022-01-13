@@ -31,7 +31,7 @@
 - [Auto Login](#auto-login)
 - [Git Avatar](#git-avatar)
 - [Git Branch](#git-branch)
-- [Git Branch 원격저장소 삭제](#Branch-원격저장소-삭제)
+- [Branch 원격저장소 삭제](#Branch-원격저장소-삭제)
 - [Git Push Error](#git-push-error)
 
 <br />
@@ -381,6 +381,8 @@ git branch -d lucas
 ```
 git branch -D lucas
 ```
+
+<br />
 
 **Branch 종류** <br />
 브랜치 종류에는 5가지가 존재하며 메인 Branch와 보조 Branch를 포함합니다.
