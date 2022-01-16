@@ -1,6 +1,5 @@
 ##   The Easiest Git
 Git의 기본적인 사용법에 대해 기술한 레포지토리입니다. <br />
-이 레포지토리는 DevNcore팀이 관리하고 있습니다.
   
 <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
 
@@ -9,8 +8,6 @@ Git의 기본적인 사용법에 대해 기술한 레포지토리입니다. <br 
 | <a href="https://github.com/devncore/the-easiest-git/stargazers"><img src="https://img.shields.io/github/stars/devncore/the-easiest-git" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/the-easiest-git" alt="License"> | <a href="https://github.com/devncore/the-easiest-git/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/the-easiest-git" alt="Commits-per-month"></a> |
 
 <br />
-
-
 
 ## Contents
 - [Config](#config)
