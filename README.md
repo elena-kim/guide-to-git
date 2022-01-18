@@ -15,9 +15,9 @@
 - [Commit](#commit)
 - [Commit 수정](#commit-수정)
 - [Git Log](#git-log)
+- [Git Branch](#git-branch)
 - [Git 복구](#git-복구)
 - [Git Avatar](#git-avatar)
-- [Git Branch](#git-branch)
 - [Git Push Error](#git-push-error)
 
 <br />
@@ -258,6 +258,66 @@ git log --date=short --pretty=format:%h,%an,%ae,%ad,%s > history.csv
 ```
 
 <br/>
+
+## Git Branch
+
+모든 버전 관리 시스템은 브랜치를 지원하는데, 개발을 하다 보면 코드를 여러 개로 복사해야 하는 일이 자주 생기게 됩니다. 이때 여러 개발자들이 원래 코드와는 상관없이 각자 독립적인 작업 영역 안에서 개발을 진행할 수 있게 해주는 기능이 바로 브랜치입니다. 
+
+브랜치 종류에는 5가지가 존재하며 메인 Branch와 보조 Branch를 포함합니다.
+
+| Master Branch | Develop Branch | Feature Branch | Release Branch | Hotfix Branch |
+|:-------------:|:--------------:|:--------------:|:--------------:|:-------------:|
+| 제품으로 출시될 수 있는 브랜치 | 다음 출시 버전을 개발하는 브랜치 |  기능을 개발하는 브랜치 (Local) | 이번 출시 버전을 준비하는 브랜치 | 출시 버전에서 발생한 버그를 수정하는 브랜치 |     
+
+#### Branch 조회
+
+```
+git branch
+```
+
+#### Branch 생성
+
+```python
+git branch lucas   # git branch <브랜치명>
+```
+
+#### Branch 전환
+
+```python
+git checkout lucas   # git checkout <브랜치명>
+```
+
+#### Branch 병합 
+
+```python
+git checkout main
+git merge lucas     # git merge <병합할 브랜치명>
+```
+
+#### Branch 삭제   
+
+> ##### Local Repository
+
+```python
+git branch -d lucas   # git branch -d <브랜치명>
+```
+
+아직 Merge 하지 않은 커밋이 있을 경우 위의 명령으로 삭제되지 않기 때문에 병합 상태와 관계없이 강제로 삭제하려면 `-D` 옵션을 사용합니다.
+
+```python
+git branch -D lucas   # git branch -D <브랜치명>
+```
+
+<br />
+
+> #### Remote Repository
+아래 명령어를 통해 원격저장소에 올라가 있는 브랜치를 삭제할 수 있습니다.
+
+```
+git push origin --delete lucas   # git push origin --delete <브랜치명>
+```
+
+<br />
       
 ## Git 복구
 `git rebase` 또는 `git reset` 등으로 커밋을 잘못 삭제했을 때 **`git reflog`** 명령을 통해 Git 이력을 확인하여 복구할 수 있습니다. <br>
@@ -299,71 +359,6 @@ return bitmapImage;
 ```
 
 ![](https://contrib.rocks/image?repo=devncore/leagueoflegends)
-
-<br />
-
-## Git Branch
-
-#### Branch란?
-모든 버전 관리 시스템은 브랜치를 지원하는데 개발을 하다 보면 코드를 여러 개로 복사해야 하는 일이 자주 생긴다. 이 때 코드를 통째로 복사하고 나서 원래 코드와는 상관없이 독립적으로 개발을 진행할 수 있는데, 이렇게 독립적으로 개발하는 것이 브랜치다.
-
-#### Branch 종류 
-브랜치 종류에는 5가지가 존재하며 메인 Branch와 보조 Branch를 포함합니다.
-
-| Master Branch | Develop Branch | Feature branch | Release Branch | Hotfix Branch |
-|:-------------:|:--------------:|:--------------:|:--------------:|:-------------:|
-| 제품으로 출시될 수 있는 브랜치 | 다음 출시 버전을 개발하는 브랜치 |  기능을 개발하는 브랜치 (Local) | 이번 출시 버전을 준비하는 브랜치 | 출시 버전에서 발생한 버그를 수정하는 브랜치 |     
-
-#### Branch 조회
-
-```
-git branch
-```
-
-#### Branch 생성
-`git branch <브랜치명>`
-
-```
-git branch lucas
-```
-
-#### Branch 전환
-`git checkout <브랜치명>`
-
-```
-git checkout lucas
-```
-
-#### Branch 병합 
-`git merge <병합할 브랜치명>`
-
-```
-git checkout main
-git merge lucas
-```
-
-#### Branch 삭제   
-`git branch -d <브랜치명>`
-
-```
-git branch -d lucas
-```
-
-가끔 브랜치 삭제시 정상적으로 머지가 되어있지 않거나 충돌이 해결되지 않은 브랜치의 경우 아래와 같은 메시지와 함께 삭제가 불가능할 때가 있는데 병합 상태와 관계없이 강제로 삭제하려면 -D 옵션을 사용하면 됩니다.
-
-`git branch -D <브랜치명>`
-
-```
-git branch -D lucas
-```
-
-#### Branch 원격저장소 삭제
-
-로컬이 아닌 git 원격저장소 브랜치를 삭제 합니다.
-
-```
-git push origin --delete lucas
-```
 
 <br />
 
