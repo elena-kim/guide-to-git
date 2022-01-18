@@ -16,8 +16,6 @@
 - [Commit 수정](#commit-수정)
 - [Git Log](#git-log)
 - [Git 복구](#git-복구)
-- [Switch Branch](#switch-branch)
-- [Auto Login](#auto-login)
 - [Git Avatar](#git-avatar)
 - [Git Branch](#git-branch)
 - [Branch 원격저장소 삭제](#Branch-원격저장소-삭제)
@@ -281,24 +279,6 @@ git checkout -b <삭제한 브랜치명> <hash id>
 ```
 <br/>
     
-## Switch Branch
-```
-git checkout "branch name"
-```
-
-<br/>
-    
-## Auto Login
-```
-$ git config credential.helper store
-$ git push http://example.com/repo.git (ex. git push https://github.com/devncore/leagueoflegends.git)
-Username: <type your username>
-Password: <type your password>
-```
-Also we suggest to read [ gitcredentials](https://git-scm.com/docs/gitcredentials)
-
-<br/>
-
 ## Git Avatar
 ```
 https://avatars1.githubusercontent.com/devncore-james
