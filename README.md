@@ -305,64 +305,60 @@ return bitmapImage;
 
 ## Git Branch
 
-**Branch란?** <br />
+#### Branch란?
 모든 버전 관리 시스템은 브랜치를 지원하는데 개발을 하다 보면 코드를 여러 개로 복사해야 하는 일이 자주 생긴다. 이 때 코드를 통째로 복사하고 나서 원래 코드와는 상관없이 독립적으로 개발을 진행할 수 있는데, 이렇게 독립적으로 개발하는 것이 브랜치다.
 
-**Branch 조회**
+#### Branch 종류 
+브랜치 종류에는 5가지가 존재하며 메인 Branch와 보조 Branch를 포함합니다.
+
+| Master Branch | Develop Branch | Feature branch | Release Branch | Hotfix Branch |
+|:-------------:|:--------------:|:--------------:|:--------------:|:-------------:|
+| 제품으로 출시될 수 있는 브랜치 | 다음 출시 버전을 개발하는 브랜치 |  기능을 개발하는 브랜치 (Local) | 이번 출시 버전을 준비하는 브랜치 | 출시 버전에서 발생한 버그를 수정하는 브랜치 |     
+
+#### Branch 조회
 
 ```
 git branch
 ```
 
-**Branch 생성**   
-`Git Branch <브랜치명>`
+#### Branch 생성
+`git branch <브랜치명>`
 
 ```
-git branch feature_ lucas
+git branch lucas
 ```
 
-**Branch 전환**   
-`Git Checkout <브랜치명>`
+#### Branch 전환
+`git checkout <브랜치명>`
 
 ```
 git checkout lucas
 ```
 
-**Branch 병합**   
-`Git Merge <병합할 브랜치명>`
+#### Branch 병합 
+`git merge <병합할 브랜치명>`
 
 ```
 git checkout main
 git merge lucas
-
 ```
-**Branch 삭제**   
-`Git Branch -d <브랜치명>`
+
+#### Branch 삭제   
+`git branch -d <브랜치명>`
 
 ```
 git branch -d lucas
 ```
 
-가끔 브랜치 삭제시 정상적으로 머지가 되어있지 않거나 충돌이 해결되지 않은 브랜치의 경우 아래와 같은 메시지와 함께 삭제가 불가능 할때가 있는데 병합 상태와 관계없이 강제로 삭제하려면 -D 옵션을 사용하면 됩니다.
+가끔 브랜치 삭제시 정상적으로 머지가 되어있지 않거나 충돌이 해결되지 않은 브랜치의 경우 아래와 같은 메시지와 함께 삭제가 불가능할 때가 있는데 병합 상태와 관계없이 강제로 삭제하려면 -D 옵션을 사용하면 됩니다.
 
-`Git Branch -D <브랜치명>`
+`git branch -D <브랜치명>`
 
 ```
 git branch -D lucas
 ```
 
-<br />
-
-**Branch 종류** <br />
-브랜치 종류에는 5가지가 존재하며 메인 Branch와 보조 Branch를 포함합니다.
-
-| Master Branch | Develop Branch | Feature branch | Release Branch | Hotfix Branch |
-|:-------------:|:--------------:|:--------------:|:--------------:|:-------------:|
-| 제품으로 출시될 수 있는 브랜치 | 다음 출시 버전을 개발하는 브랜치 |  기능을 개발하는 브랜치 (Local) | 이번 출시 버전을 준비하는 브랜치 | 출시 버전에서 발생한 버그를 수정 하는 브랜치 |     
-
-<br />
-
-## Branch 원격저장소 삭제
+#### Branch 원격저장소 삭제
 
 로컬이 아닌 git 원격저장소 브랜치를 삭제 합니다.
 
@@ -370,6 +366,7 @@ git branch -D lucas
 git push origin --delete lucas
 ```
 
+<br />
 
 ## Git Push Error
 아래의 메세지는 git push 명령어를 실행 하였을 때 나는 오류 메세지이다.
