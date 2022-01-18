@@ -18,7 +18,6 @@
 - [Git 복구](#git-복구)
 - [Git Avatar](#git-avatar)
 - [Git Branch](#git-branch)
-- [Branch 원격저장소 삭제](#Branch-원격저장소-삭제)
 - [Git Push Error](#git-push-error)
 
 <br />
@@ -369,8 +368,8 @@ git push origin --delete lucas
 <br />
 
 ## Git Push Error
-아래의 메세지는 git push 명령어를 실행 하였을 때 나는 오류 메세지이다.
-원인은 원격저장소 이름을 입력하지 않았기 때문이며 원격저장소 이름을 확인후 원격저장소명을 명시해 Push 한다.
+아래의 메세지는 git push 명령어를 실행하였을 때 나는 오류 메세지이다.
+원인은 원격저장소 이름을 입력하지 않았기 때문이며 원격저장소 이름을 확인 후 원격저장소명을 명시해 Push 한다.
 ```
 fatal: The current branch lucas has no upstream branch. <br />
 To push the current branch and set the remote as upstream, use
@@ -382,9 +381,8 @@ git push --set-upstream origin lucas
 git remote -v
 ```
 
-**원격저장소명을 명시하여 push**   git push <원격저장소명> <브랜치명>
-```
-git push origin lucas
-```
+**원격저장소명을 명시하여 push**   
 
-
+```python
+git push origin lucas   # git push <remote name> <branch name>
+```
