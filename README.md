@@ -17,8 +17,8 @@
 - [Git Log](#git-log)
 - [Git Branch](#git-branch)
 - [Git 복구](#git-복구)
-- [Git Avatar](#git-avatar)
 - [Git Error](#git-error)
+- [Git Avatar](#git-avatar)
 
 <br />
 
@@ -337,7 +337,31 @@ git reflog
 git checkout -b <삭제한 브랜치명> <hash id>
 ```
 <br/>
-    
+
+## Git Error
+
+#### 1. Git Push Error
+```
+fatal: The current branch lucas has no upstream branch.  
+To push the current branch and set the remote as upstream, use
+git push --set-upstream origin lucas
+```
+Git Push 명령어를 실행할 때 위와 같은 에러 메시지가 출력되면 원격저장소 이름을 확인한 후 원격저장소명을 명시해 Push 합니다.
+
+```python
+git remote -v
+git push origin lucas   # git push <remote name> <branch name>
+```
+<br />
+
+#### 2. SSL 403 Error
+Git Clone 과정에서 SSL 403 에러가 생길 경우 아래 `http.sslverify` 옵션을 변경합니다.
+```
+git config --global http.sslVerify false
+```
+
+<br/>
+
 ## Git Avatar
 ```
 https://avatars1.githubusercontent.com/devncore-james
@@ -361,25 +385,3 @@ return bitmapImage;
 ![](https://contrib.rocks/image?repo=devncore/leagueoflegends)
 
 <br />
-
-## Git Error
-
-#### 1. Git Push Error
-```
-fatal: The current branch lucas has no upstream branch.  
-To push the current branch and set the remote as upstream, use
-git push --set-upstream origin lucas
-```
-Git Push 명령어를 실행할 때 위와 같은 에러 메시지가 출력되면 원격저장소 이름을 확인한 후 원격저장소명을 명시해 Push 합니다.
-
-```python
-git remote -v
-git push origin lucas   # git push <remote name> <branch name>
-```
-<br />
-
-#### 2. SSL 403 Error
-Git Clone 과정에서 SSL 403 에러가 생길 경우 아래 `http.sslverify` 옵션을 변경합니다.
-```
-git config --global http.sslVerify false
-```
