@@ -18,8 +18,7 @@
 - [Git Branch](#git-branch)
 - [Git 복구](#git-복구)
 - [Git Avatar](#git-avatar)
-- [Git Push Error](#git-push-error)
-- [SSL 403 에러 해결방법](#ssl-403-에러-해결방법)
+- [Git Error](#git-error)
 
 <br />
 
@@ -363,28 +362,24 @@ return bitmapImage;
 
 <br />
 
-## Git Push Error
-아래의 메세지는 git push 명령어를 실행하였을 때 나는 오류 메세지이다.
-원인은 원격저장소 이름을 입력하지 않았기 때문이며 원격저장소 이름을 확인 후 원격저장소명을 명시해 Push 한다.
+## Git Error
+
+#### 1. Git Push Error
 ```
-fatal: The current branch lucas has no upstream branch. <br />
+fatal: The current branch lucas has no upstream branch.  
 To push the current branch and set the remote as upstream, use
 git push --set-upstream origin lucas
 ```
-
-**현재 저장된 원격저장소명 확인**
-```
-git remote -v
-```
-
-**원격저장소명을 명시하여 push**   
+Git Push 명령어를 실행할 때 위와 같은 에러 메시지가 출력되면 원격저장소 이름을 확인한 후 원격저장소명을 명시해 Push 합니다.
 
 ```python
+git remote -v
 git push origin lucas   # git push <remote name> <branch name>
 ```
+<br />
 
-## SSL 403 에러 해결방법
-Git **Clone** 과정에서 SSL 403 에러가 생길 경우 아래 http.sslverify 옵션을 변경합니다.
+#### 2. SSL 403 Error
+Git Clone 과정에서 SSL 403 에러가 생길 경우 아래 `http.sslverify` 옵션을 변경합니다.
 ```
 git config --global http.sslVerify false
 ```
