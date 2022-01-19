@@ -19,6 +19,7 @@
 - [Git 복구](#git-복구)
 - [Git Avatar](#git-avatar)
 - [Git Push Error](#git-push-error)
+- [SSL 403 에러 해결방법](#ssl-403-에러-해결방법)
 
 <br />
 
@@ -380,4 +381,10 @@ git remote -v
 
 ```python
 git push origin lucas   # git push <remote name> <branch name>
+```
+
+## SSL 403 에러 해결방법
+Git **Clone** 과정에서 SSL 403 에러가 생길 경우 아래 http.sslverify 옵션을 변경합니다.
+```
+git config --global http.sslVerify false
 ```
