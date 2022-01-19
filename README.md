@@ -18,7 +18,7 @@
 - [Git Branch](#git-branch)
 - [Git 복구](#git-복구)
 - [Git Error](#git-error)
-- [Git Avatar](#git-avatar)
+- [GitHub Avatar](#github-avatar)
 
 <br />
 
@@ -362,9 +362,11 @@ git config --global http.sslVerify false
 
 <br/>
 
-## Git Avatar
+## GitHub Avatar
+GitHub 사용자의 Avatar를 가져오는 방법에는 아래와 같은 것들이 있습니다.
 ```
 https://avatars1.githubusercontent.com/devncore-james
+https://github.com/devncore-james.png
 ```
 
 **C# BitmapSource**
