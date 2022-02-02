@@ -14,6 +14,7 @@
 - [Clone](#clone)
 - [Commit](#commit)
 - [Commit 수정](#commit-수정)
+- [Pull](#pull)
 - [Git Log](#git-log)
 - [Git Branch](#git-branch)
 - [Git 복구](#git-복구)
@@ -235,6 +236,18 @@ git push -f origin main  # git push -f <remote name> <branch name>
 ```
 
 <br />
+
+## Pull
+> pull에 대한 개념을 설명합니다.
+TBD...
+
+Remember, a pull is a fetch and a merge.
+
+* `git pull origin master` fetches commits from the master branch of the origin remote (into the local origin/master branch), and then it merges origin/master into the branch you currently have checked out.
+
+* `git pull` only works if the branch you have checked out is tracking an upstream branch. For example, if the branch you have checked out tracks origin/master, `git pull` is equivalent to `git pull origin master`
+
+* `git pull origin/master` is invalid unless you have a remote called "origin/master". However, `git merge origin/master` is valid. (It is the second step of `git pull origin master` as described above.)
 
 ## Git Log
 해당 레포지토리의 커밋 기록을 **`git log`** 명령어를 통해 확인할 수 있습니다.
