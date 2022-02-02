@@ -5,7 +5,7 @@
 
 | Star | License | Activity |
 |:----:|:-------:|:--------:|
-| <a href="https://github.com/devncore/the-easiest-git/stargazers"><img src="https://img.shields.io/github/stars/devncore/the-easiest-git" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/the-easiest-git" alt="License"> | <a href="https://github.com/devncore/the-easiest-git/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/the-easiest-git" alt="Commits-per-month"></a> |
+| <a href="https://github.com/devncore/guide-to-git/stargazers"><img src="https://img.shields.io/github/stars/devncore/guide-to-git" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/guide-to-git" alt="License"> | <a href="https://github.com/devncore/guide-to-git/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/guide-to-git" alt="Commits-per-month"></a> |
 
 <br />
 
