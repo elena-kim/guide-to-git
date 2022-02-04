@@ -250,6 +250,11 @@ Remember, a pull is a fetch and a merge.
 
 * `git pull origin/master` is invalid unless you have a remote called "origin/master". However, `git merge origin/master` is valid. (It is the second step of `git pull origin master` as described above.)
 
+## Push
+> push에 대한 개념을 설명합니다.
+
+* `git push --set-upstream origin master` 줄여서 `git push -u origin main` 입력해도 됩니다. upstream을 한 번 설정하고 나면 다음부터 git push 또는 git pull 이라고 명령어만 입력해도 됩니다.
+
 ## Git Log
 해당 레포지토리의 커밋 기록을 **`git log`** 명령어를 통해 확인할 수 있습니다.
 
