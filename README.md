@@ -249,6 +249,8 @@ Remember, a pull is a fetch and a merge.
 
 * `git pull origin/master` is invalid unless you have a remote called "origin/master". However, `git merge origin/master` is valid. (It is the second step of `git pull origin master` as described above.)
 
+- upstream
+
 ## Git Log
 해당 레포지토리의 커밋 기록을 **`git log`** 명령어를 통해 확인할 수 있습니다.
 
