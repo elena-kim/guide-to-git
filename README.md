@@ -239,7 +239,8 @@ git push -f origin main  # git push -f <remote name> <branch name>
 
 ## Pull
 > pull에 대한 개념을 설명합니다.
-TBD...
+
+* `git pull origin master` git pull [원격 저장소 이름] [원격 저장소에서 받아오고자 하는 브랜치 이름] 레파지토리가 생성될 때 기본 원격 저장소 명은 "origin"입니다. **git remote**, **git branch** 명령어를 통해 원격 저장소 이름과 현재 브랜치명을 확인할 수 있습니다. 
 
 Remember, a pull is a fetch and a merge.
 
@@ -248,8 +249,6 @@ Remember, a pull is a fetch and a merge.
 * `git pull` only works if the branch you have checked out is tracking an upstream branch. For example, if the branch you have checked out tracks origin/master, `git pull` is equivalent to `git pull origin master`
 
 * `git pull origin/master` is invalid unless you have a remote called "origin/master". However, `git merge origin/master` is valid. (It is the second step of `git pull origin master` as described above.)
-
-- upstream
 
 ## Git Log
 해당 레포지토리의 커밋 기록을 **`git log`** 명령어를 통해 확인할 수 있습니다.
