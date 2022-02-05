@@ -335,8 +335,6 @@ git branch -D lucas   # git branch -D <브랜치명>
 git push origin --delete lucas   # git push origin --delete <브랜치명>
 ```
 
-<br />
-
 #### Branch Push
 > Push1
 ```python
@@ -352,8 +350,6 @@ git push --set-upstream <원격저장소명> <브랜치명>
 git push --set -upstream kevin
 ```
 
-<br />
-
 #### Branch Pull
 해당 Remote Brach에 정보를 가져와 merge 를 합니다.
 ```python
@@ -363,9 +359,25 @@ git pull <원격저장소명> <브랜치명>
 #### Branch Merge
 로컬 브랜치(작업한 브랜치)를 다른 브랜치에 병합 하는 방법
 
-1. 로컬 브랜치를 원격저장소 브랜치에 push까지 진행한 후 PullRequest를 통해 병합이 가능합니다.
+1. 로컬 브랜치에서 commit까지 진행한 후 병합할 브랜치로 이동
+현재 brach는 lucas
+```python
+git add .
+git commit -m "Update"
+git checkout main
+```
+2. git merge <commit한 브랜치명> 으로 병합 진행
+```python
+git merge lucas
+```
+3. 병합 후 충돌이 난 부분이 있으면 이 부분을 수정, 없다면 바로 push를 진행합니다.
+```python
+git push
+```
 
-2. 로컬 브랜치에서 commit까지 진행한 후 병합할 브랜치로 이동(git checkout <브랜치명>). git merge <commit한 브랜치명> 으로 병합이 가능합니다. 병합 후 충돌이 난 부분이 있으면 이 부분을 수정후, 없으면 바로 push를 진행합니다.
+원격저장소에 브랜치를 다른 원격저장소 브랜치에 병합하는 방법
+
+- 로컬 브랜치를 원격저장소 브랜치에 push까지 진행한 후 PullRequest를 통해 병합이 가능합니다.
 
 <br />
 
