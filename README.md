@@ -338,7 +338,7 @@ git push --set-upstream <원격저장소명> <브랜치명>
 ```
 
 브랜치 생성 후 1번, 2번 두 방식 모두 원격 저장소에 push가 되지만 2번 set upstream을 해주지 않으면 해당 브랜치에서 pull, push를 해줄 때마다 <원격저장소명> <브랜치명>을 입력해 줘야 합니다.    
-__**git push --set -upstream kevin**__
+`git push --set -upstream kevin`
 
 #### Branch Pull
 ```python
