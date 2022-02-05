@@ -408,7 +408,7 @@ git config --global http.sslVerify false
 
 <br/>
 
-## Git HEADE
+## Git HEAD
 TBD...
 
 
