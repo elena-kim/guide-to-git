@@ -20,6 +20,8 @@
 - [Git 복구](#git-복구)
 - [Git Error](#git-error)
 - [Git HEAD](#git-head)
+- [Git Switch](#git-switch)
+- [Git Restore](#git-restore)
 - [GitHub Avatar](#github-avatar)
 
 <br />
@@ -436,6 +438,18 @@ git config --global http.sslVerify false
 | 마지막 커밋 HEAD 정보 |
 |:-------------:|
 | ![image](https://user-images.githubusercontent.com/76234292/152634952-051e6929-fcee-4c14-be48-e3c5bfd74005.png) |
+
+<br/>
+
+## GitHub Switch
+
+
+
+<br/>
+
+## GitHub Restore
+
+
 
 <br/>
 
