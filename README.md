@@ -429,8 +429,13 @@ git config --global http.sslVerify false
 <br/>
 
 ## Git HEAD
-HEAD 란 현재 브랜치를 가리키는 포인터이며 브랜치는 브랜치에 담긴 커밋 중 가장 마지막 커밋을 가리킵니다.
+모든 브랜치에는 HEAD 값이 존재하며 HEAD는 해당 브랜치에 커밋 정보중 가장 마지막 커밋을 가리킵니다. <br />
+지금 HEAD가 가리키는 커밋은 바로 다음 커밋의 부모가 되며 HEAD는 현재 브랜치를 가리키는 커밋에 대한 포인터입니다.
 
+
+| 마지막 커밋 HEAD 정보 |
+|:-------------:|
+| ![image](https://user-images.githubusercontent.com/76234292/152634952-051e6929-fcee-4c14-be48-e3c5bfd74005.png) |
 
 <br/>
 
