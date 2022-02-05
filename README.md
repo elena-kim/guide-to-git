@@ -461,11 +461,11 @@ git restore .
 git restore README.md
 ```
 
-스테이징 되돌리기 명령어 추가
+스테이징 되돌리기 명령어 추가 <br />
 스테이징을 되돌린다는 말은 git add를 통해 스테이지에 올라간 것을 다시 내리는 것을 의미합니다.
 
  ```python
- git restore --staged FileTest.txt
+ git restore --staged FileTest.txt  #기존사용 명령어 git reset FileTest.txt
  ```
  
 <br/>
