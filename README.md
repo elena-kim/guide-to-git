@@ -409,7 +409,7 @@ git config --global http.sslVerify false
 <br/>
 
 ## Git HEAD
-TBD...
+HEAD 란 현재 브랜치를 가리키는 포인터이며 브랜치는 브랜치에 담긴 커밋 중 가장 마지막 커밋을 가리킵니다.
 
 
 <br/>
