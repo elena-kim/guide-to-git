@@ -19,6 +19,7 @@
 - [Git Branch](#git-branch)
 - [Git 복구](#git-복구)
 - [Git Error](#git-error)
+- [Git HEAD](#git-head)
 - [GitHub Avatar](#github-avatar)
 
 <br />
@@ -404,6 +405,12 @@ Git Clone 과정에서 SSL 403 에러가 생길 경우 아래 `http.sslverify` �
 ```
 git config --global http.sslVerify false
 ```
+
+<br/>
+
+## Git HEADE
+TBD...
+
 
 <br/>
 
