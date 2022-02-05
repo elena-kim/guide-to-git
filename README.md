@@ -442,14 +442,24 @@ git config --global http.sslVerify false
 <br/>
 
 ## GitHub Switch
+Git 2.23 버전부터 checkout의 기능을 switch와 restore로 각각 분리되었습니다.
+branch를 이동할 때 사용하며 기존 git checkout 과 동일합니다.
 
-
+```python
+git switch lucas # git switch <브랜치명>
+```
 
 <br/>
 
 ## GitHub Restore
+Git 2.23 버전부터 checkout의 기능을 switch와 restore로 각각 분리되었습니다.
+변경사항을 복구 해주는 기능을 지원하며 git checkout . 과 동일합니다.
 
-
+작업중인 정보를 기존의 마지막 커밋상태로 변경하는 경우
+```python
+git restore .
+git restore README.md
+```
 
 <br/>
 
