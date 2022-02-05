@@ -129,6 +129,7 @@ git rm --cached <파일명>
 
 스테이징을 완료했다면 **`git commit -m <커밋 메시지>`** 명령어를 통해 저장소에 변경 내용을 적용합니다. <br>
 이때 **`-m`** 앞에 **`-a`** 옵션을 추가하면 add와 commit을 한번에 할 수 있기 때문에 **`git add`** 를 생략할 수 있습니다.
+(단, 한번도 add되지 않은 파일은 add를 따로 작업 해줘야함.)
 
 ```csharp
 // -a 옵션 미적용
@@ -360,16 +361,19 @@ git pull <원격저장소명> <브랜치명>
 로컬 브랜치(작업한 브랜치)를 다른 브랜치에 병합 하는 방법
 
 1. 로컬 브랜치에서 commit까지 진행한 후 병합할 브랜치로 이동
-현재 brach는 lucas
+
 ```python
+# 현재 branch는 lucas
 git add .
 git commit -m "Update"
 git checkout main
 ```
+
 2. git merge <commit한 브랜치명> 으로 병합 진행
 ```python
 git merge lucas
 ```
+
 3. 병합 후 충돌이 난 부분이 있으면 이 부분을 수정, 없다면 바로 push를 진행합니다.
 ```python
 git push
