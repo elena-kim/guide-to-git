@@ -327,17 +327,31 @@ git branch -d lucas   # git branch -d <브랜치명>
 git branch -D lucas   # git branch -D <브랜치명>
 ```
 
-#### Branch Pull, Push
-**1**
+#### Branch Push
+> Push1
 ```python
 git push <원격저장소명> <브랜치명>
 ```
-**2**
+> Push2
 ```python
 git push --set-upstream <원격저장소명> <브랜치명>
 ```
 
-브랜치 생성 후 1번, 2번 두 방식 모두 원격 저장소에 push가 되지만 2번 set upstream을 해주지 않으면 해당 브랜치에서 pull, push를 해줄 때마다 <원격저장소명> <브랜치명>을 입력해 줘야 한다.
+브랜치 생성 후 1번, 2번 두 방식 모두 원격 저장소에 push가 되지만 2번 set upstream을 해주지 않으면 해당 브랜치에서 pull, push를 해줄 때마다 <원격저장소명> <브랜치명>을 입력해 줘야 합니다.    
+__**git push --set -upstream kevin**__
+
+#### Branch Pull
+```python
+git pull <원격저장소명> <브랜치명>
+```
+
+#### Branch Merge
+
+로컬 브랜치(작업한 브랜치)를 다른 브랜치에 병합 하는 방법
+
+1. 로컬 브랜치를 원격저장소 브랜치에 push까지 진행한 후 PullRequest를 통해 병합이 가능합니다.
+
+2. 로컬 브랜치에서 commit까지 진행한 후 병합할 브랜치로 이동(git checkout <브랜치명>). git merge <commit한 브랜치명> 으로 병합이 가능합니다. 병합 후 충돌이 난 부분이 있으면 이 부분을 수정후, 없으면 바로 push를 진행합니다.
 
 <br />
 
