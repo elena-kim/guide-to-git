@@ -328,6 +328,15 @@ git branch -d lucas   # git branch -d <브랜치명>
 git branch -D lucas   # git branch -D <브랜치명>
 ```
 
+> #### Remote Repository
+원격저장소에 올라가 있는 브랜치를 삭제 합니다.
+
+```python
+git push origin --delete lucas   # git push origin --delete <브랜치명>
+```
+
+<br />
+
 #### Branch Push
 > Push1
 ```python
@@ -339,15 +348,19 @@ git push --set-upstream <원격저장소명> <브랜치명>
 ```
 
 브랜치 생성 후 1번, 2번 두 방식 모두 원격 저장소에 push가 되지만 2번 set upstream을 해주지 않으면 해당 브랜치에서 pull, push를 해줄 때마다 <원격저장소명> <브랜치명>을 입력해 줘야 합니다.    
-`git push --set -upstream kevin`
+```python
+git push --set -upstream kevin
+```
+
+<br />
 
 #### Branch Pull
+해당 Remote Brach에 정보를 가져와 merge 를 합니다.
 ```python
 git pull <원격저장소명> <브랜치명>
 ```
 
 #### Branch Merge
-
 로컬 브랜치(작업한 브랜치)를 다른 브랜치에 병합 하는 방법
 
 1. 로컬 브랜치를 원격저장소 브랜치에 push까지 진행한 후 PullRequest를 통해 병합이 가능합니다.
@@ -356,15 +369,6 @@ git pull <원격저장소명> <브랜치명>
 
 <br />
 
-> #### Remote Repository
-아래 명령어를 통해 원격저장소에 올라가 있는 브랜치를 삭제할 수 있습니다.
-
-```
-git push origin --delete lucas   # git push origin --delete <브랜치명>
-```
-
-<br />
-      
 ## Git 복구
 `git rebase` 또는 `git reset` 등으로 커밋을 잘못 삭제했을 때 **`git reflog`** 명령을 통해 Git 이력을 확인하여 복구할 수 있습니다. <br>
 `reflog`는 참조(reference)의 기록(log)을 보여주는 명령으로, 각 커밋의 이력과 Hash Id를 확인할 수 있습니다.
