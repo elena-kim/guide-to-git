@@ -327,6 +327,18 @@ git branch -d lucas   # git branch -d <브랜치명>
 git branch -D lucas   # git branch -D <브랜치명>
 ```
 
+#### Branch Pull, Push
+**1**
+```python
+git push <원격저장소명> <브랜치명>
+```
+**2**
+```python
+git push --set-upstream <원격저장소명> <브랜치명>
+```
+
+브랜치 생성 후 1번, 2번 두 방식 모두 원격 저장소에 push가 되지만 2번 set upstream을 해주지 않으면 해당 브랜치에서 pull, push를 해줄 때마다 <원격저장소명> <브랜치명>을 입력해 줘야 한다.
+
 <br />
 
 > #### Remote Repository
