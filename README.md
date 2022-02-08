@@ -492,5 +492,14 @@ return bitmapImage;
 ## GitIgnore
 `gitignore` 파일은 Git이 무시해야 하는 의도적으로 추적되지 않은 파일을 지정합니다 . Git에서 이미 추적한 파일은 영향을 받지 않습니다. 
 
+### .gitignore 파일 적용
+작성한 .gitignore을 commit하여 원격 저장소에 push한다.
+
+```python
+git rm -r --cached .
+git add. 
+git commit -m "커밋메세지"
+git push origin {브랜치명}
+```
 
 <br />
