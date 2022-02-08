@@ -23,6 +23,7 @@
 - [Git Switch](#git-switch)
 - [Git Restore](#git-restore)
 - [GitHub Avatar](#github-avatar)
+- [.gitignore 파일적용](#gitignore)
 
 <br />
 
