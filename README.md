@@ -497,7 +497,7 @@ return bitmapImage;
 - https://www.toptal.com/developers/gitignore
 
 ### .gitignore 파일 적용
-작성한 .gitignore을 commit하여 원격 저장소에 push한다.
+생성 및 작성한 .gitignore 파일을 git repository 최상위 디렉터리에 저장후 commit하여 원격 저장소에 push 합니다.
 
 ```python
 git rm -r --cached .
