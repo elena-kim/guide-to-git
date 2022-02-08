@@ -23,7 +23,7 @@
 - [Git Switch](#git-switch)
 - [Git Restore](#git-restore)
 - [GitHub Avatar](#github-avatar)
-- [.gitignore 파일적용](#gitignore)
+- [GitIgnore](#gitignore)
 
 <br />
 
@@ -486,5 +486,11 @@ return bitmapImage;
 ```
 
 ![](https://contrib.rocks/image?repo=devncore/leagueoflegends)
+
+<br />
+
+## GitIgnore
+`gitignore` 파일은 Git이 무시해야 하는 의도적으로 추적되지 않은 파일을 지정합니다 . Git에서 이미 추적한 파일은 영향을 받지 않습니다. 
+
 
 <br />
