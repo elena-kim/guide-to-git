@@ -10,25 +10,25 @@
 <br />
 
 ## Contents
-- [Config](#config)
-- [Clone](#clone)
-- [Pull](#pull)
-- [Commit](#commit)
-- [Commit 수정](#commit-수정)
-- [Push](#push)
-- [Branch](#branch)
-- [Log](#log)
-- [Git 복구](#git-복구)
-- [Git Error](#git-error)
-- [Git HEAD](#git-head)
-- [Git Switch](#git-switch)
-- [Git Restore](#git-restore)
-- [Git Ignore](#git-ignore)
-- [GitHub Avatar](#github-avatar)
+- [Config](#config-)
+- [Clone](#clone-)
+- [Pull](#pull-)
+- [Commit](#commit-)
+- [Commit 수정](#commit-수정-)
+- [Push](#push-)
+- [Branch](#branch-)
+- [Log](#log-)
+- [Git 복구](#git-복구-)
+- [Git Error](#git-error-)
+- [Git HEAD](#git-head-)
+- [Git Switch](#git-switch-)
+- [Git Restore](#git-restore-)
+- [Git Ignore](#git-ignore-)
+- [GitHub Avatar](#github-avatar-)
 
 <br />
 
-## Config
+## Config [🔝](#contents)
 **`git config`** 명령어를 통해 설정 내용을 확인하고 변경할 수 있습니다. Git 설정 파일은 아래 세 가지가 있습니다.
 
 <table>
@@ -92,7 +92,7 @@ git config user.name
 
 <br />
 
-## Clone
+## Clone [🔝](#contents)
 
 GitHub에서 소스를 최초로 내려받을 때 git clone 명령어를 사용합니다.  
 Clone을 하기 위해서는 Git 저장소의 주소를 알아야 하는데, 주소 형식은 아래와 같습니다.
@@ -111,7 +111,7 @@ git clone https://github.com/devncore/guide-to-git.git
 
 <br/>
 
-## Pull
+## Pull [🔝](#contents)
 `git pull` 명령어는 원격 저장소의 정보를 가져오면서 자동으로 로컬 브랜치에 병합(Merge)까지 수행합니다.
 
 ```python
@@ -124,7 +124,7 @@ git pull origin master  # git pull <remote name> <branch name>
 
 <br />
 
-## Commit
+## Commit [🔝](#contents)
 Git의 Repository 구조는 **작업폴더(Working Direcory), 인덱스(Staging Area), 저장소(Head Repository)** 로 나눌 수 있습니다. 
 
 ![git](https://user-images.githubusercontent.com/74305823/145518503-56b2517d-8816-4dac-b2c1-65939d0be01b.png)
@@ -158,7 +158,7 @@ git commit -a -m "Fix Error"
 
 <br>
 
-## Commit 수정
+## Commit 수정 [🔝](#contents)
 Git은 로컬에 모든 버전관리 데이터를 복사해두고 있기 때문에 자유롭게 수정할 수 있습니다. 하지만 [Git 공식 문서](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)에도 쓰여 있듯, 이미 Push된 Commit에 대해서는 수정 작업을 지양해야 하며, 고쳐야 할 부분이 생겼다면 새로 수정작업을 추가하도록 합니다.
 
 #### 1. 마지막 커밋 메시지 수정하기
@@ -254,7 +254,7 @@ git push -f origin main  # git push -f <remote name> <branch name>
 
 <br />
 
-## Push
+## Push [🔝](#contents)
 `git push` 명령어는 로컬 저장소에서 커밋 내용을 원격 저장소에 반영하기 위해 사용합니다.
 
 ```python
@@ -271,7 +271,7 @@ git push -u origin main
 
 <br />
 
-## Log
+## Log [🔝](#contents)
 해당 레포지토리의 커밋 기록을 **`git log`** 명령어를 통해 확인할 수 있습니다.
 
 ```
@@ -294,7 +294,7 @@ git log --date=short --pretty=format:%h,%an,%ae,%ad,%s > history.csv
 
 <br/>
 
-## Branch
+## Branch [🔝](#contents)
 
 모든 버전 관리 시스템은 브랜치를 지원하는데, 개발을 하다 보면 코드를 여러 개로 복사해야 하는 일이 자주 생기게 됩니다. 이때 여러 개발자들이 원래 코드와는 상관없이 각자 독립적인 작업 영역 안에서 개발을 진행할 수 있게 해주는 기능이 바로 브랜치입니다. 
 
@@ -399,7 +399,7 @@ git push
 
 <br />
 
-## Git 복구
+## Git 복구 [🔝](#contents)
 `git rebase` 또는 `git reset` 등으로 커밋을 잘못 삭제했을 때 **`git reflog`** 명령을 통해 Git 이력을 확인하여 복구할 수 있습니다. <br>
 `reflog`는 참조(reference)의 기록(log)을 보여주는 명령으로, 각 커밋의 이력과 Hash Id를 확인할 수 있습니다.
 
@@ -418,7 +418,7 @@ git checkout -b <삭제한 브랜치명> <hash id>
 ```
 <br/>
 
-## Git Error
+## Git Error [🔝](#contents)
 
 #### 1. Git Push Error
 ```
@@ -442,7 +442,7 @@ git config --global http.sslVerify false
 
 <br/>
 
-## Git HEAD
+## Git HEAD [🔝](#contents)
 모든 브랜치에는 HEAD 값이 존재하며 HEAD는 해당 브랜치에 커밋 정보중 가장 마지막 커밋을 가리킵니다. <br />
 지금 HEAD가 가리키는 커밋은 바로 다음 커밋의 부모가 되며 HEAD는 현재 브랜치를 가리키는 커밋에 대한 포인터입니다.
 
@@ -452,7 +452,7 @@ git config --global http.sslVerify false
 
 <br/>
 
-## Git Switch
+## Git Switch [🔝](#contents)
 Git 2.23 버전부터 checkout의 기능이 switch와 restore로 각각 분리되었습니다. <br />
 branch를 이동할 때 사용하며 기존 git checkout 과 동일합니다.
 
@@ -462,7 +462,7 @@ git switch lucas # git switch <브랜치명>
 
 <br/>
 
-## Git Restore
+## Git Restore [🔝](#contents)
 Git 2.23 버전부터 checkout의 기능이 switch와 restore로 각각 분리되었습니다. <br />
 변경사항을 복구 해주는 기능을 지원하며 git checkout . 과 동일합니다.
 
@@ -481,7 +481,7 @@ git restore README.md
  
 <br/>
 
-## Git Ignore
+## Git Ignore [🔝](#contents)
 Git 사이트 `gitignore` 문서에서 `gitignore` 파일은 Git이 무시해야 하는 의도적으로 추적되지 않은 파일을 지정하며 Git에서 이미 추적한 파일은 영향을 받지 않습니다라고 설명 하고 있습니다. <br />
 실제로 프로젝트를 참여하고 개발을 진행하는 경우 불필요한 파일들이 많이 생성 됩니다. 예를 들면 git pull 을 하는경우 작업자들의 작업환경이 모두 다르기 때문에 불필요한 파일을 다운받게 되는데 `.gitignore` 는 이러한 파일들을 git 관리 대상에서 제외하기 위해(commit에 포함하지 않도록) 규칙들을 저장한 파일입니다.
 
@@ -533,7 +533,7 @@ folder/file.txt
 
 <br />
 
-## GitHub Avatar
+## GitHub Avatar [🔝](#contents)
 GitHub 사용자의 Avatar를 가져오는 방법에는 아래와 같은 것들이 있습니다.
 ```
 https://avatars1.githubusercontent.com/devncore-james
