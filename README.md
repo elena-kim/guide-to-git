@@ -23,8 +23,8 @@
 - [Git HEAD](#git-head)
 - [Git Switch](#git-switch)
 - [Git Restore](#git-restore)
-- [GitHub Avatar](#github-avatar)
 - [Git Ignore](#git-ignore)
+- [GitHub Avatar](#github-avatar)
 
 <br />
 
@@ -471,32 +471,6 @@ git restore README.md
  
 <br/>
 
-## GitHub Avatar
-GitHub 사용자의 Avatar를 가져오는 방법에는 아래와 같은 것들이 있습니다.
-```
-https://avatars1.githubusercontent.com/devncore-james
-https://github.com/devncore-james.png
-```
-
-**C# BitmapSource**
-```csharp
-string name = "devncore-elena";
-var bitmapImage = new BitmapImage();
-bitmapImage.BeginInit();
-bitmapImage.UriSource = new Uri(string.Format("https://avatars1.githubusercontent.com/{0}", name);
-bitmapImage.EndInit();
-return bitmapImage;
-```
-
-**Contributors 목록**
-```
-![](https://contrib.rocks/image?repo=devncore/leagueoflegends)
-```
-
-![](https://contrib.rocks/image?repo=devncore/leagueoflegends)
-
-<br />
-
 ## Git Ignore
 Git 사이트 `gitignore` 문서에서 `gitignore` 파일은 Git이 무시해야 하는 의도적으로 추적되지 않은 파일을 지정하며 Git에서 이미 추적한 파일은 영향을 받지 않습니다라고 설명 하고 있습니다. <br />
 실제로 프로젝트를 참여하고 개발을 진행하는 경우 불필요한 파일들이 많이 생성 됩니다. 예를 들면 git pull 을 하는경우 작업자들의 작업환경이 모두 다르기 때문에 불필요한 파일을 다운받게 되는데 `.gitignore` 는 이러한 파일들을 git 관리 대상에서 제외하기 위해(commit에 포함하지 않도록) 규칙들을 저장한 파일입니다.
@@ -548,3 +522,27 @@ folder/file.txt
 ```
 
 <br />
+
+## GitHub Avatar
+GitHub 사용자의 Avatar를 가져오는 방법에는 아래와 같은 것들이 있습니다.
+```
+https://avatars1.githubusercontent.com/devncore-james
+https://github.com/devncore-james.png
+```
+
+**C# BitmapSource**
+```csharp
+string name = "devncore-elena";
+var bitmapImage = new BitmapImage();
+bitmapImage.BeginInit();
+bitmapImage.UriSource = new Uri(string.Format("https://avatars1.githubusercontent.com/{0}", name);
+bitmapImage.EndInit();
+return bitmapImage;
+```
+
+**Contributors 목록**
+```
+![](https://contrib.rocks/image?repo=devncore/leagueoflegends)
+```
+
+![](https://contrib.rocks/image?repo=devncore/leagueoflegends)
