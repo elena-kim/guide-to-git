@@ -105,7 +105,7 @@ https://github.com/<USERNAME>/<REPOSITORY_NAME>.git
 예를 들어, 이 레포지토리를 Clone 하고 싶다면 아래와 같이 입력하면 됩니다.
 
 ```git
-git clone https://github.com/devncore/the-easiest-git.git
+git clone https://github.com/devncore/guide-to-git.git
 ```
 
 <br/>
