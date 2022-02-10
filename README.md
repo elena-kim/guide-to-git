@@ -12,18 +12,19 @@
 ## Contents
 - [Config](#config)
 - [Clone](#clone)
+- [Pull](#pull)
 - [Commit](#commit)
 - [Commit 수정](#commit-수정)
-- [Pull](#pull)
-- [Git Log](#git-log)
-- [Git Branch](#git-branch)
+- [Push](#push)
+- [Branch](#branch)
+- [Log](#log)
 - [Git 복구](#git-복구)
 - [Git Error](#git-error)
 - [Git HEAD](#git-head)
 - [Git Switch](#git-switch)
 - [Git Restore](#git-restore)
 - [GitHub Avatar](#github-avatar)
-- [GitIgnore](#gitignore)
+- [Git Ignore](#git-ignore)
 
 <br />
 
@@ -109,6 +110,19 @@ git clone https://github.com/devncore/guide-to-git.git
 ```
 
 <br/>
+
+## Pull
+`git pull` 명령어는 원격 저장소의 정보를 가져오면서 자동으로 로컬 브랜치에 병합(Merge)까지 수행합니다.
+
+```python
+git pull origin master  # git pull <remote name> <branch name>
+```
+
+<br />
+
+`git fetch` 명령어 또한 원격 저장소의 커밋 정보들을 로컬 저장소로 가져온다는 점에서 `git pull` 명령어와 비슷한 역할을 수행합니다. 하지만 자동으로 병합을 수행하지 않는다는 점에서 `git pull` 명령어와 차이가 있습니다.
+
+<br />
 
 ## Commit
 Git의 Repository 구조는 **작업폴더(Working Direcory), 인덱스(Staging Area), 저장소(Head Repository)** 로 나눌 수 있습니다. 
@@ -242,17 +256,14 @@ git push -f origin main  # git push -f <remote name> <branch name>
 
 <br />
 
-## Pull
-> pull에 대한 개념을 설명합니다.
-
-* `git pull origin master` git pull [원격 저장소 이름] [원격 저장소에서 받아오고자 하는 브랜치 이름] 레파지토리가 생성될 때 기본 원격 저장소 명은 "origin"입니다. **git remote**, **git branch** 명령어를 통해 원격 저장소 이름과 현재 브랜치명을 확인할 수 있습니다. 
-
 ## Push
 > push에 대한 개념을 설명합니다.
 
 * `git push --set-upstream origin master` 줄여서 `git push -u origin main` 입력해도 됩니다. upstream을 한 번 설정하고 나면 다음부터 git push 또는 git pull 이라고 명령어만 입력해도 됩니다.
 
-## Git Log
+<br />
+
+## Log
 해당 레포지토리의 커밋 기록을 **`git log`** 명령어를 통해 확인할 수 있습니다.
 
 ```
@@ -275,7 +286,7 @@ git log --date=short --pretty=format:%h,%an,%ae,%ad,%s > history.csv
 
 <br/>
 
-## Git Branch
+## Branch
 
 모든 버전 관리 시스템은 브랜치를 지원하는데, 개발을 하다 보면 코드를 여러 개로 복사해야 하는 일이 자주 생기게 됩니다. 이때 여러 개발자들이 원래 코드와는 상관없이 각자 독립적인 작업 영역 안에서 개발을 진행할 수 있게 해주는 기능이 바로 브랜치입니다. 
 
@@ -427,10 +438,9 @@ git config --global http.sslVerify false
 모든 브랜치에는 HEAD 값이 존재하며 HEAD는 해당 브랜치에 커밋 정보중 가장 마지막 커밋을 가리킵니다. <br />
 지금 HEAD가 가리키는 커밋은 바로 다음 커밋의 부모가 되며 HEAD는 현재 브랜치를 가리키는 커밋에 대한 포인터입니다.
 
+> 마지막 커밋 HEAD 정보  
 
-| 마지막 커밋 HEAD 정보 |
-|:-------------:|
-| ![image](https://user-images.githubusercontent.com/76234292/152634952-051e6929-fcee-4c14-be48-e3c5bfd74005.png) |
+<img src="https://user-images.githubusercontent.com/76234292/152634952-051e6929-fcee-4c14-be48-e3c5bfd74005.png" width="750"/>
 
 <br/>
 
@@ -489,7 +499,7 @@ return bitmapImage;
 
 <br />
 
-## GitIgnore
+## Git Ignore
 Git 사이트 `gitignore` 문서에서 `gitignore` 파일은 Git이 무시해야 하는 의도적으로 추적되지 않은 파일을 지정하며 Git에서 이미 추적한 파일은 영향을 받지 않습니다라고 설명 하고 있습니다. <br />
 실제로 프로젝트를 참여하고 개발을 진행하는 경우 불필요한 파일들이 많이 생성 됩니다. 예를 들면 git pull 을 하는경우 작업자들의 작업환경이 모두 다르기 때문에 불필요한 파일을 다운받게 되는데 `.gitignore` 는 이러한 파일들을 git 관리 대상에서 제외하기 위해(commit에 포함하지 않도록) 규칙들을 저장한 파일입니다.
 
