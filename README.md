@@ -212,8 +212,6 @@ git commit --amend --author="user.name <user.email>"
 
 이미 Push된 커밋이라면 `force`를 통해 수정된 커밋을 강제로 Push해줘야 합니다. 하지만 앞서 말했듯 이미 Push된 커밋을 수정하는 것은 지양해야 하며, 특히 `force pushing`은 Push된 커밋 로그를 갖고 있던 다른 팀원들이 로그를 수동으로 수정해줘야 하기 때문에 최대한 사용하지 않아야 합니다.
 
-> _**We strongly discourage force pushing**, since this changes the history of your repository. If you force push, people who have already cloned your repository will have to manually fix their local history._
-
 <br>  
 
 아래 명령을 통해 Remote에 변경사항을 적용할 수 있습니다.
