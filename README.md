@@ -255,9 +255,19 @@ git push -f origin main  # git push -f <remote name> <branch name>
 <br />
 
 ## Push
-> push에 대한 개념을 설명합니다.
+`git push` 명령어는 로컬 저장소에서 커밋 내용을 원격 저장소에 반영하기 위해 사용합니다.
 
-* `git push --set-upstream origin master` 줄여서 `git push -u origin main` 입력해도 됩니다. upstream을 한 번 설정하고 나면 다음부터 git push 또는 git pull 이라고 명령어만 입력해도 됩니다.
+```python
+git push origin main  # git push <remote name> <branch name>
+```
+
+<br />
+
+기본적으로 위와 같이 원격 저장소명과 브랜치명을 인수로 받지만, 매번 입력하는 일이 번거롭다면 아래와 같이 `-u` 옵션을 추가하면 됩니다. 이후에는 원격 저장소명과 브랜치명 없이 `git push` 명령어만 입력해도 해당 저장소에 push됩니다.
+
+```python
+git push -u origin main
+```
 
 <br />
 
