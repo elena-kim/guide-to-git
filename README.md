@@ -21,8 +21,7 @@
 - [Git 복구](#git-복구-)
 - [Git Error](#git-error-)
 - [Git HEAD](#git-head-)
-- [Git Switch](#git-switch-)
-- [Git Restore](#git-restore-)
+- [Git Checkout](#git-checkout-)
 - [Git Ignore](#git-ignore-)
 - [GitHub Avatar](#github-avatar-)
 
@@ -452,31 +451,30 @@ git config --global http.sslVerify false
 
 <br/>
 
-## Git Switch [🔝](#contents)
-Git 2.23 버전부터 checkout의 기능이 switch와 restore로 각각 분리되었습니다. <br />
-branch를 이동할 때 사용하며 기존 git checkout 과 동일합니다.
+## Git Checkout [🔝](#contents)
+Git 2.23 버전부터 `git checkout`의 기능이 `switch`와 `restore`로 분리되었습니다.
+
+#### Switch
+`git switch` 명령어를 통해 브랜치를 전환할 수 있습니다.
 
 ```python
 git switch lucas # git switch <브랜치명>
 ```
 
-<br/>
+#### Restore
+`git restore` 명령어를 통해 수정한 파일 내용들을 되돌릴 수 있습니다. 
 
-## Git Restore [🔝](#contents)
-Git 2.23 버전부터 checkout의 기능이 switch와 restore로 각각 분리되었습니다. <br />
-변경사항을 복구 해주는 기능을 지원하며 git checkout . 과 동일합니다.
-
-작업중인 정보를 기존의 마지막 커밋상태로 변경하는 경우
 ```python
-git restore .
-git restore README.md
+git restore .           # 수정된 모든 파일 되돌리기
+git restore README.md   # 특정 파일만 되돌리기
 ```
 
-스테이징 되돌리기 명령어 추가 <br />
->스테이징을 되돌린다는 말은 git add를 통해 스테이지에 올라간 것을 다시 내리는 것을 의미합니다.
+<br />
+
+또한 `git add` 명령어를 통해 스테이지에 올라간 것을 다시 내릴 수도 있습니다.
 
  ```python
- git restore --staged FileTest.txt  #기존사용 명령어 git reset FileTest.txt
+ git restore --staged test.txt  
  ```
  
 <br/>
