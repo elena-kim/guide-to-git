@@ -318,13 +318,13 @@ git branch lucas   # git branch <브랜치명>
 #### Branch 전환
 
 ```python
-git checkout lucas   # git checkout <브랜치명>
+git switch lucas   # git switch <브랜치명>
 ```
 
 #### Branch 병합 
 
 ```python
-git checkout main
+git switch main
 git merge lucas     # git merge <병합할 브랜치명>
 ```
 
@@ -379,7 +379,7 @@ git pull <원격저장소명> <브랜치명>
 # 현재 branch는 lucas
 git add .
 git commit -m "Update"
-git checkout main
+git switch main
 ```
 
 2. git merge <commit한 브랜치명> 으로 병합 진행
