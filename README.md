@@ -506,7 +506,6 @@ git push origin {브랜치명}
 |특정 경로의 특정 파일 제외하기|`folder/file.txt`|
 |특정 확장자 파일 제외하기|`*.txt`|
 |예외 만들기|`!readme.md`|
-```
 
 <br />
 
