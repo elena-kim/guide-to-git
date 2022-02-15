@@ -359,9 +359,9 @@ Branch와 관련된 주요 명령어는 아래와 같습니다.
 <br/>
 
 #### Branch Merge
-로컬 브랜치(작업한 브랜치)를 다른 브랜치에 병합 하는 방법
+#### 1. 로컬 브랜치(작업한 브랜치)를 다른 브랜치에 병합하기
 
-1. 로컬 브랜치에서 commit까지 진행한 후 병합할 브랜치로 이동
+로컬 브랜치에서 Commit을 진행한 후 병합할 브랜치로 변환합니다.
 
 ```python
 # 현재 branch는 lucas
@@ -370,19 +370,16 @@ git commit -m "Update"
 git switch main
 ```
 
-2. git merge <commit한 브랜치명> 으로 병합 진행
+`git merge` 명령어를 통해 main 브랜치로 병합을 진행합니다.
 ```python
-git merge lucas
+git merge lucas   # git merge <commit한 branch> 
 ```
 
-3. 병합 후 충돌이 난 부분이 있으면 이 부분을 수정, 없다면 바로 push를 진행합니다.
-```python
-git push
-```
+이후 충돌(Conflict)이 발생했다면 해당 부분을 수정하고, 없다면 `git push` 명령어로 커밋 내용을 적용합니다.
+  
+#### 2. 원격저장소에 브랜치를 다른 원격저장소 브랜치에 병합하는 방법  
 
-원격저장소에 브랜치를 다른 원격저장소 브랜치에 병합하는 방법
-
-- 로컬 브랜치를 원격저장소 브랜치에 push까지 진행한 후 PullRequest를 통해 병합이 가능합니다.
+  로컬 브랜치를 원격저장소 브랜치에 Push한 후 PullRequest를 통해 병합이 가능합니다.
 
 <br />
 
@@ -390,7 +387,7 @@ git push
 `git rebase` 또는 `git reset` 등으로 커밋을 잘못 삭제했을 때 **`git reflog`** 명령을 통해 Git 이력을 확인하여 복구할 수 있습니다. <br>
 `reflog`는 참조(reference)의 기록(log)을 보여주는 명령으로, 각 커밋의 이력과 Hash Id를 확인할 수 있습니다.
 
-#### commit 복구하기
+#### Commit 복구하기
 
 ```python
 git reflog   
