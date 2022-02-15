@@ -303,51 +303,60 @@ git log --date=short --pretty=format:%h,%an,%ae,%ad,%s > history.csv
 |:-------------:|:--------------:|:--------------:|:--------------:|:-------------:|
 | 제품으로 출시될 수 있는 브랜치 | 다음 출시 버전을 개발하는 브랜치 |  기능을 개발하는 브랜치 (Local) | 이번 출시 버전을 준비하는 브랜치 | 출시 버전에서 발생한 버그를 수정하는 브랜치 |     
 
-#### Branch 조회
+<br />
 
-```
-git branch
-```
+Branch와 관련된 주요 명령어는 아래와 같습니다.
 
-#### Branch 생성
+<table>
+  <thead>
+    <th>역할</th>
+    <th>명령어</th>
+    <th>예시</th>
+  </thead>  
+  <tbody>
+    <tr>
+      <td align="center">  &nbsp;&nbsp;&nbsp; Branch 조회 &nbsp;&nbsp;&nbsp; </td>
+      <td><code>git branch</code></td>
+      <td><code>git branch</code></td>
+    </tr>
+    <tr>
+      <td align="center">Branch 생성</td>
+      <td><code>git branch [branch name]</code></td>
+      <td><code>git branch lucas</code></td>
+    </tr>
+    <tr>
+      <td align="center">Branch 전환</td>
+      <td><code>git switch [branch name]</code></td>
+      <td><code>git switch lucas</code></td>
+    </tr>
+    <tr>
+      <td align="center">Branch 삭제</td>
+      <td>
+        <b>Local Repository</b>
+          <h6>1. Merge 하지 않은 커밋이 없을 경우</h6>
+          <code>
+            git branch -d [branch name]
+          </code>
+          <h6>2. Merge 하지 않은 커밋이 있을 경우 (강제 삭제)</h6>
+          <code>
+            git branch -D [branch name]
+          </code>
+        <br/><br/>
+        <b>Remote Repository</b><br/><br/>
+          <code>
+            git push origin --delete [branch name]
+          </code>
+      </td>
+      <td>
+        <code>git branch -d lucas</code><br/><br/>
+        <code>git branch -D lucas</code><br/><br/>
+        <code>git push origin --delete lucas</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```python
-git branch lucas   # git branch <브랜치명>
-```
-
-#### Branch 전환
-
-```python
-git switch lucas   # git switch <브랜치명>
-```
-
-#### Branch 병합 
-
-```python
-git switch main
-git merge lucas     # git merge <병합할 브랜치명>
-```
-
-#### Branch 삭제   
-
-> ##### Local Repository
-
-```python
-git branch -d lucas   # git branch -d <브랜치명>
-```
-
-아직 Merge 하지 않은 커밋이 있을 경우 위의 명령으로 삭제되지 않기 때문에 병합 상태와 관계없이 강제로 삭제하려면 `-D` 옵션을 사용합니다.
-
-```python
-git branch -D lucas   # git branch -D <브랜치명>
-```
-
-> #### Remote Repository
-원격저장소에 올라가 있는 브랜치를 삭제 합니다.
-
-```python
-git push origin --delete lucas   # git push origin --delete <브랜치명>
-```
+<br/>
 
 #### Branch Merge
 로컬 브랜치(작업한 브랜치)를 다른 브랜치에 병합 하는 방법
