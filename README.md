@@ -349,27 +349,6 @@ git branch -D lucas   # git branch -D <브랜치명>
 git push origin --delete lucas   # git push origin --delete <브랜치명>
 ```
 
-#### Branch Push
-> Push1
-```python
-git push <원격저장소명> <브랜치명>
-```
-> Push2
-```python
-git push --set-upstream <원격저장소명> <브랜치명>
-```
-
-브랜치 생성 후 1번, 2번 두 방식 모두 원격 저장소에 push가 되지만 2번 set upstream을 해주지 않으면 해당 브랜치에서 pull, push를 해줄 때마다 <원격저장소명> <브랜치명>을 입력해 줘야 합니다.    
-```python
-git push --set -upstream kevin
-```
-
-#### Branch Pull
-해당 Remote Brach에 정보를 가져와 merge 를 합니다.
-```python
-git pull <원격저장소명> <브랜치명>
-```
-
 #### Branch Merge
 로컬 브랜치(작업한 브랜치)를 다른 브랜치에 병합 하는 방법
 
