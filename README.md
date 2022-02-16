@@ -330,6 +330,11 @@ Branch와 관련된 주요 명령어는 아래와 같습니다.
       <td><code>git switch lucas</code></td>
     </tr>
     <tr>
+      <td align="center">Branch 원격 저장소 List</td>
+      <td><code>git branch [option]</code></td>
+      <td><code>git branch -r</code></td>
+    </tr>
+    <tr>
       <td align="center">Branch 삭제</td>
       <td>
         <b>Local Repository</b>
