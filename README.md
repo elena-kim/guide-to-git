@@ -341,10 +341,16 @@ Branch와 관련된 주요 명령어는 아래와 같습니다.
           <code>
             git branch -a [branch option]
           </code>
+        <br/><br/>
+        <b> 원격저장소 Branch 가져오기 </b><br/><br/>
+          <code>
+            git checkout -t [checkout option]
+          </code>          
       </td>
       <td>
         <code>git branch -r</code><br/><br/>
         <code>git branch -a</code><br/><br/>
+        <code>git checkout -t origin/lucas</code><br/><br/>
       </td>
     </tr>
     <tr>
