@@ -508,8 +508,9 @@ git push origin {브랜치명}
 
 ### .gitignore 작성규칙 예시
 
-|특정 파일 제외하기|`readme.md`|
+|||
 |:-------------|:---------|
+|특정 파일 제외하기|`readme.md`|
 |현재 경로에 있는 파일만 제외하기|`/readme.md`|
 |특정 폴더안의 파일 제외하기|`node_modules/`|
 |특정 경로의 특정 파일 제외하기|`folder/file.txt`|
