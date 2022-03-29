@@ -344,7 +344,7 @@ Branch와 관련된 주요 명령어는 아래와 같습니다.
         <br/><br/>
         <b> 원격저장소 Branch 가져오기 </b><br/><br/>
           <code>
-            git checkout -t [checkout option]
+            git checkout -t [remote명/branch명]
           </code>          
       </td>
       <td>
