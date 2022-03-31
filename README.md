@@ -542,3 +542,7 @@ return bitmapImage;
 ```
 
 ![](https://contrib.rocks/image?repo=devncore/leagueoflegends)
+
+<br />
+전체적인 구조변경
+TBD...
