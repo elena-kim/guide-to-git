@@ -10,14 +10,14 @@
 <br />
 
 ## Contents
-- [Config](#config-)
-- [Clone](#clone-)
-- [Pull](#pull-)
-- [Commit](#commit-)
-- [Commit 수정](#commit-수정-)
-- [Push](#push-)
-- [Branch](#branch-)
-- [Log](#log-)
+- [Git Config](#config-)
+- [Git Clone](#clone-)
+- [Git Pull](#pull-)
+- [Git Commit](#commit-)
+- [Git Commit 수정](#commit-수정-)
+- [Git Push](#push-)
+- [Git Branch](#branch-)
+- [Git Log](#log-)
 - [Git 복구](#git-복구-)
 - [Git Error](#git-error-)
 - [Git HEAD](#git-head-)
@@ -544,4 +544,4 @@ return bitmapImage;
 ![](https://contrib.rocks/image?repo=devncore/leagueoflegends)
 
 <br />
-TBD...
+
