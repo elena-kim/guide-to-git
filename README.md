@@ -1,13 +1,3 @@
-## Guide to Git
-이 리포지토리는 Git의 기본적인 사용법에 대해 기술한 리포지토리입니다. <br />
-  
-<a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
-
-| Star | License | Activity |
-|:----:|:-------:|:--------:|
-| <a href="https://github.com/devncore/guide-to-git/stargazers"><img src="https://img.shields.io/github/stars/devncore/guide-to-git" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/guide-to-git" alt="License"> | <a href="https://github.com/devncore/guide-to-git/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/guide-to-git" alt="Commits-per-month"></a> |
-
-<br />
 
 ## Contents
 - [Git Config](#config-)
