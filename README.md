@@ -421,7 +421,7 @@ git checkout -b <삭제한 브랜치명> <hash id>
 git fsck --no-reflog | awk '/dangling commit/ {print $3}' | xargs -L 1 git --no-pager show -s --format="%ci %H" | sort
 ```
 >❗dangling commit: 잃어버린 커밋이라는 뜻으로 어느 브랜치나 태그로부터도 참조되고 있지 않은 커밋 (stash도 포함)
-
+<br>
 
 복구하고자 하는 hash값을 확인한 후, 아래 명령어를 통해 해당 스태시를 복구합니다.
 ```
