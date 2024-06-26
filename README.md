@@ -322,20 +322,14 @@ Branch와 관련된 주요 명령어는 아래와 같습니다.
     <tr>
       <td align="center">Branch 원격저장소</td>
       <td>
-        <b> Branch List </b>
+        <b>Branch List</b>
           <h6>1. 원격저장소 branch List 확인 </h6>
-          <code>
-            git branch -r [branch option]
-          </code>
+          <code>git branch -r [branch option]</code>
           <h6>2. 원격저장소와 로컬 모든 branch List 확인</h6>
-          <code>
-            git branch -a [branch option]
-          </code>
+          <code>git branch -a [branch option]</code>
         <br/><br/>
         <b> 원격저장소 Branch 가져오기 </b><br/><br/>
-          <code>
-            git checkout -t [remote명/branch명]
-          </code>          
+          <code>git checkout -t [remote명/branch명]</code>          
       </td>
       <td>
         <code>git branch -r</code><br/><br/>
@@ -348,18 +342,12 @@ Branch와 관련된 주요 명령어는 아래와 같습니다.
       <td>
         <b>Local Repository</b>
           <h6>1. Merge 하지 않은 커밋이 없을 경우</h6>
-          <code>
-            git branch -d [branch name]
-          </code>
+          <code>git branch -d [branch name]</code>
           <h6>2. Merge 하지 않은 커밋이 있을 경우 (강제 삭제)</h6>
-          <code>
-            git branch -D [branch name]
-          </code>
+          <code>git branch -D [branch name]</code>
         <br/><br/>
         <b>Remote Repository</b><br/><br/>
-          <code>
-            git push origin --delete [branch name]
-          </code>
+        <code>git push origin --delete [branch name]</code>
       </td>
       <td>
         <code>git branch -d lucas</code><br/><br/>
